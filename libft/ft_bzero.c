@@ -1,9 +1,12 @@
+#include "libft.h"
 
-void bzero(char *str, int n) {
-  char *p;
-
-  p = str;
-  while (n-- > 0) {
+/**
+ * Establece los primeros n bytes del área de memoria apuntada por s al valor 0.
+ * @param s Puntero al área de memoria a establecer.
+ * @param n Número de bytes a establecer.
+*/
+void bzero(void *s, size_t n) {
+  unsigned char *p = s;
+  while (n--)
     *p++ = 0;
-  }
 }
