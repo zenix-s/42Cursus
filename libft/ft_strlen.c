@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 13:47:11 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/12 18:38:38 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/12 18:40:12 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 */
 size_t ft_strlen(const char *str)
 {
-  int i;
+  size_t i;
 
   i = 0;
   while (str[i])
