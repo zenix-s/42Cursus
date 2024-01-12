@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:54:42 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/12 18:38:11 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/12 19:04:40 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,35 +17,200 @@
 # include <stdlib.h>
 # include <stdio.h>
 
-// Parte 1
+/**
+ * Comprueba si un caracter es alfanumerico
+ * @param chr caracter a comprobar
+ * @return 1 si es alfanumerico, 0 si no lo es
+*/
 int		ft_isalpha(int chr);
+
+/**
+ * Comprueba si un caracter es numerico
+ * @param chr caracter a comprobar
+ * @return 1 si es numerico, 0 si no lo es
+*/
 int		ft_isdigit(int chr);
+
+/**
+ * Comprueba si un caracter es alfanumerico
+ * @param chr caracter a comprobar
+ * @return 1 si es alfanumerico, 0 si no lo es
+*/
 int		ft_isalnum(int chr);
+
+/**
+ * Comprueba si un caracter es imprimible
+ * @param chr caracter a comprobar
+ * @return 1 si es imprimible, 0 si no lo es
+*/
 int		ft_isascii(int chr);
+
+/**
+ * Comprueba si un caracter es imprimible
+ * @param chr caracter a comprobar
+ * @return 1 si es imprimible, 0 si no lo es
+*/
 int		ft_isprint(int chr);
+
+/**
+ * Convierte un caracter a mayusculas
+ * @param chr caracter a convertir
+ * @return caracter convertido
+*/
 int		ft_toupper(int chr);
+
+/**
+ * Convierte un caracter a minusculas
+ * @param chr caracter a convertir
+ * @return caracter convertido
+*/
 int		ft_tolower(int chr);
 
+/**
+ * Calcula la longitud de una cadena
+ * @param str cadena a calcular
+ * @return longitud de la cadena
+*/
 size_t	ft_strlen(const char *str);
-char	*ft_strchr(const char *str, int chr);
-char	*ft_strrchr(const char *str, int chr);
-int		ft_strncmp(const char *str1, const char *str2, size_t len);
-char	*ft_strchr(const char *str, int chr);
-int		ft_strnstr(const char *str, const char *str_to_find);
-size_t  ft_strlcpy(char *dst, const char *src, size_t len);
-size_t  ft_strlcat(char *dst, const char *src, size_t len);
 
+/**
+ * Compara dos cadenas
+ * @param str1 cadena 1
+ * @param str2 cadena 2
+ * @param len numero de caracteres a comparar
+ * @return 0 si son iguales, <0 si str1 es menor que str2, 
+ * >0 si str1 es mayor que str2
+*/
+char	*ft_strchr(const char *str, int chr);
+
+/**
+ * Compara dos cadenas
+ * @param str1 cadena 1
+ * @param str2 cadena 2
+ * @param len numero de caracteres a comparar
+ * @return 0 si son iguales, <0 si str1 es menor que str2, 
+ * >0 si str1 es mayor que str2
+*/
+char	*ft_strrchr(const char *str, int chr);
+
+/**
+ * Compara dos cadenas
+ * @param str1 cadena 1
+ * @param str2 cadena 2
+ * @param len numero de caracteres a comparar
+ * @return 0 si son iguales, <0 si str1 es menor que str2, 
+ * >0 si str1 es mayor que str2
+*/
+int		ft_strncmp(const char *str1, const char *str2, size_t len);
+
+/**
+ * Compara dos cadenas
+ * @param str1 cadena 1
+ * @param str2 cadena 2
+ * @param len numero de caracteres a comparar
+ * @return 0 si son iguales, <0 si str1 es menor que str2, 
+ * >0 si str1 es mayor que str2
+*/
+char	*ft_strchr(const char *str, int chr);
+
+/**
+ * Compara dos cadenas
+ * @param str1 cadena 1
+ * @param str2 cadena 2
+ * @param len numero de caracteres a comparar
+ * @return 0 si son iguales, <0 si str1 es menor que str2, 
+ * >0 si str1 es mayor que str2
+*/
+int		ft_strnstr(const char *str, const char *str_to_find);
+
+/**
+ * Copia una cadena en otra
+ * @param dst cadena destino
+ * @param src cadena origen
+ * @param len numero de caracteres a copiar
+ * @return longitud de la cadena copiada
+*/
+size_t	ft_strlcpy(char *dst, const char *src, size_t len);
+
+/**
+ * Concatena dos cadenas
+ * @param dst cadena destino
+ * @param src cadena origen
+ * @param len numero de caracteres a copiar
+ * @return longitud de la cadena copiada
+*/
+size_t	ft_strlcat(char *dst, const char *src, size_t len);
+
+/**
+ * Busca la primera ocurrencia de un caracter en una cadena
+ * @param str cadena a buscar
+ * @param chr caracter a buscar
+ * @return puntero a la primera ocurrencia del caracter en la cadena
+*/
+char	*ft_strdup(const char *str);
+
+/**
+ * Reserva memoria con malloc y la inicializa a 0
+ * @param count numero de elementos
+ * @param len tamaño de cada elemento
+ * @return puntero a la memoria reservada
+*/
 void	*ft_memset(void *ptr, int chr, size_t len);
+
+/**
+ * Reserva memoria con malloc y la inicializa a 0
+ * @param count numero de elementos
+ * @param len tamaño de cada elemento
+ * @return puntero a la memoria reservada
+*/
 void	ft_bzero(void *ptr, size_t len);
+
+/**
+ * Reserva memoria con malloc y la inicializa a 0
+ * @param count numero de elementos
+ * @param len tamaño de cada elemento
+ * @return puntero a la memoria reservada
+*/
 void	*ft_memcpy(void *dest, const void *src, size_t len);
+
+/**
+ * Reserva memoria con malloc y la inicializa a 0
+ * @param count numero de elementos
+ * @param len tamaño de cada elemento
+ * @return puntero a la memoria reservada
+*/
 void	*ft_memmove(void *dest, const void *src, size_t len);
+
+/**
+ * Reserva memoria con malloc y la inicializa a 0
+ * @param count numero de elementos
+ * @param len tamaño de cada elemento
+ * @return puntero a la memoria reservada
+*/
 void	*ft_memchr(const void *ptr, int chr, size_t len);
+
+/**
+ * Reserva memoria con malloc y la inicializa a 0
+ * @param count numero de elementos
+ * @param len tamaño de cada elemento
+ * @return puntero a la memoria reservada
+*/
 int		ft_memcmp(const void *ptr1, const void *ptr2, size_t len);
 
+/**
+ * Reserva memoria con malloc y la inicializa a 0
+ * @param count numero de elementos
+ * @param len tamaño de cada elemento
+ * @return puntero a la memoria reservada
+*/
 int		ft_atoi(const char *str);
 
-void  *ft_calloc(size_t count, size_t len);
-
-
+/**
+ * Reserva memoria con malloc y la inicializa a 0
+ * @param count numero de elementos
+ * @param len tamaño de cada elemento
+ * @return puntero a la memoria reservada
+*/
+void	*ft_calloc(size_t count, size_t len);
 
 #endif
