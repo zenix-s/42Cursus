@@ -6,22 +6,22 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:18:42 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/11 12:30:34 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/12 15:05:51 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /**
  * Convierte una letra minúscula a mayúscula.
- * @param c Caracter a convertir.
+ * @param chr Caracter a convertir.
  * @return Caracter convertido.
 */
-int ft_toupper(int c) 
+int ft_toupper(int chr) 
 {
-  if (c >= 'a' && c <= 'z') 
+  if (chr >= 'a' && chr <= 'z') 
   {
-    c -= 32;
+    chr -= 32;
   }
-  return c;
+  return chr;
 }
 
 // int main(void)

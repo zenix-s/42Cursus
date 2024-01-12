@@ -6,27 +6,27 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:30:40 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/11 12:31:12 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/12 15:06:20 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /**
  * Convierte una letra mayúscula a minúscula.
- * @param c Caracter a convertir.
+ * @param chr Caracter a convertir.
  * @return Caracter convertido.
 */
-int ft_tolower(int c)
+int ft_tolower(int chr)
 {
-  if (c >= 'A' && c <= 'Z')
+  if (chr >= 'A' && chr <= 'Z')
   {
-    c += 32;
+    chr += 32;
   }
-  return c;
+  return chr;
 }
 
 int main(void)
 {
-  char c = 'A';
-  printf("%c\n", ft_tolower(c));
+  char chr = 'A';
+  printf("%c\n", ft_tolower(chr));
   return 0;
 }

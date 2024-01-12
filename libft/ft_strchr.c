@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/09 11:15:40 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/12 10:20:05 by serferna         ###   ########.fr       */
+/*   Created: 2024/01/11 12:49:05 by serferna          #+#    #+#             */
+/*   Updated: 2024/01/12 15:08:49 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/**
- * Comprueba si el caracter es alfanumerico
- * @param chr caracter a comprobar
- * @return 1 si es alfanumerico, 0 si no lo es
- 
-*/
-int ft_isalpha(int chr)
+
+char	*ft_strchr(const char *str, int chr)
 {
-	if ((chr >= 'a' && chr <= 'z') || (chr >= 'A' && chr <= 'Z'))
-	{
-		return (1);
-	}
-	else
-	{
-		return (0);
-	}
+  while (*str)
+  {
+    if (*str == (char)chr)
+      return ((char *)str);
+    str++;
+  }
+  if (*str == (char)chr)
+    return ((char *)str);
+  return (NULL);
 }
+
+// int main(void)
+// {
+//   char str[] = "Hola mundo";
+//   printf("%s\n", ft_strchr(str, 'm'));
+//   return 0;
+// }

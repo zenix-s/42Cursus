@@ -1,12 +1,12 @@
 #include "libft.h"
 /**
  * Comprueba si el caracter es alfanumerico
- * @param character caracter a comprobar
+ * @param chr caracter a comprobar
  * @return 1 si es alfanumerico, 0 si no lo es
 */
-int ft_isalnum(int character)
+int ft_isalnum(int chr)
 {
-  if (ft_isalpha(character) || ft_isdigit(character))
+  if (ft_isalpha(chr) || ft_isdigit(chr))
     return (1);
   return (0);
 }
