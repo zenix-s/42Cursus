@@ -19,13 +19,13 @@ void    *ft_memcpy(void *dest, const void *src, size_t len)
   return (dest);
 }
 
-int main(void)
-{
-  char src[50] = "Hello World";
-  char dest[50] = "Goodbye World";
+// int main(void)
+// {
+//   char src[50] = "Hola mundo";
+//   char dest[50] = "Adios Mundo";
 
-  printf("Before memcpy dest = %s\n", dest);
-  ft_memcpy(dest, src, 5);
-  printf("After memcpy dest = %s\n", dest);
-  return 0;
-}
+//   printf("Antes memcpy  = %s\n", dest);
+//   ft_memcpy(dest, src, 5);
+//   printf("Despues memcpy = %s\n", dest);
+//   return 0;
+// }
