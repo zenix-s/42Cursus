@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:54:42 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/12 19:04:40 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/12 19:23:50 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -213,4 +213,13 @@ int		ft_atoi(const char *str);
 */
 void	*ft_calloc(size_t count, size_t len);
 
+/**
+ * Reserva memoria para un substring desde str
+ * partiendo de start y de longitud len
+ * @param str
+ * @param start
+ * @param len
+ * @return
+*/
+char *ft_substr(char const *str, unsigned int start, size_t len);
 #endif
