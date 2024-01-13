@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:54:42 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/12 19:23:50 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/13 18:31:59 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -141,67 +141,29 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t len);
 */
 size_t	ft_strlcat(char *dst, const char *src, size_t len);
 
-/**
- * Busca la primera ocurrencia de un caracter en una cadena
- * @param str cadena a buscar
- * @param chr caracter a buscar
- * @return puntero a la primera ocurrencia del caracter en la cadena
-*/
 char	*ft_strdup(const char *str);
 
-/**
- * Reserva memoria con malloc y la inicializa a 0
- * @param count numero de elementos
- * @param len tamaño de cada elemento
- * @return puntero a la memoria reservada
-*/
 void	*ft_memset(void *ptr, int chr, size_t len);
 
-/**
- * Reserva memoria con malloc y la inicializa a 0
- * @param count numero de elementos
- * @param len tamaño de cada elemento
- * @return puntero a la memoria reservada
-*/
 void	ft_bzero(void *ptr, size_t len);
 
-/**
- * Reserva memoria con malloc y la inicializa a 0
- * @param count numero de elementos
- * @param len tamaño de cada elemento
- * @return puntero a la memoria reservada
-*/
 void	*ft_memcpy(void *dest, const void *src, size_t len);
 
-/**
- * Reserva memoria con malloc y la inicializa a 0
- * @param count numero de elementos
- * @param len tamaño de cada elemento
- * @return puntero a la memoria reservada
-*/
 void	*ft_memmove(void *dest, const void *src, size_t len);
 
-/**
- * Reserva memoria con malloc y la inicializa a 0
- * @param count numero de elementos
- * @param len tamaño de cada elemento
- * @return puntero a la memoria reservada
-*/
 void	*ft_memchr(const void *ptr, int chr, size_t len);
 
-/**
- * Reserva memoria con malloc y la inicializa a 0
- * @param count numero de elementos
- * @param len tamaño de cada elemento
- * @return puntero a la memoria reservada
-*/
+
+
 int		ft_memcmp(const void *ptr1, const void *ptr2, size_t len);
 
 /**
- * Reserva memoria con malloc y la inicializa a 0
- * @param count numero de elementos
- * @param len tamaño de cada elemento
- * @return puntero a la memoria reservada
+ * Convierte una cadena str a un entero
+ * Puede contener caracteres del isspace antes del numero y un signo + o - antes del numero
+ * Si el numero es mayor que el maximo entero devuelve el maximo entero
+ * @param str cadena a convertir
+ * @return entero convertido
+ *  
 */
 int		ft_atoi(const char *str);
 
@@ -222,4 +184,7 @@ void	*ft_calloc(size_t count, size_t len);
  * @return
 */
 char *ft_substr(char const *str, unsigned int start, size_t len);
+
+
+
 #endif
