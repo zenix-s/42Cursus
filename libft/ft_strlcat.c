@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 17:49:36 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/12 17:51:09 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/13 22:00:37 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,13 @@ size_t	ft_strlcat(char *dst, const char *src, size_t len)
 		return (total_len);
 }
 
-int main(void)
-{
-	char src[50] = "Hola mundo";
-	char dest[50] = "Adios Mundo";
+// int main(void)
+// {
+// 	char src[50] = "Hola mundo";
+// 	char dest[50] = "Adios Mundo";
 
-	printf("Antes strlcat  = %s\n", dest);
-	ft_strlcat(dest, src, 5);
-	printf("Despues strlcat = %s\n", dest);
-	return 0;
-}
+// 	printf("Antes strlcat  = %s\n", dest);
+// 	ft_strlcat(dest, src, 5);
+// 	printf("Despues strlcat = %s\n", dest);
+// 	return 0;
+// }

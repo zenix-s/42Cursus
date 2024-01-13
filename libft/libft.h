@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:54:42 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/13 18:31:59 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/13 21:58:32 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -153,13 +153,12 @@ void	*ft_memmove(void *dest, const void *src, size_t len);
 
 void	*ft_memchr(const void *ptr, int chr, size_t len);
 
-
-
 int		ft_memcmp(const void *ptr1, const void *ptr2, size_t len);
 
 /**
  * Convierte una cadena str a un entero
- * Puede contener caracteres del isspace antes del numero y un signo + o - antes del numero
+ * Puede contener caracteres del isspace antes del numero 
+ * y un signo + o - antes del numero
  * Si el numero es mayor que el maximo entero devuelve el maximo entero
  * @param str cadena a convertir
  * @return entero convertido
@@ -176,15 +175,22 @@ int		ft_atoi(const char *str);
 void	*ft_calloc(size_t count, size_t len);
 
 /**
- * Reserva memoria para un substring desde str
- * partiendo de start y de longitud len
+ * Reserva (con malloc(3)) y devuelve una substring de la string ’s’.
+ * La substring empieza desde el índice ’start’ y tiene una longitud máxima ’len’
  * @param str
  * @param start
  * @param len
  * @return
 */
-char *ft_substr(char const *str, unsigned int start, size_t len);
+char	*ft_substr(char const *str, unsigned int start, size_t len);
 
-
+/**
+ * Reserva (con malloc(3)) y devuelve una nueva string, 
+ * formada por la concatenación de ’s1’ y ’s2’.
+ * @param s1 Primera cadena
+ * @param s2 Segunda cadena
+ * @return Cadena concatenada
+*/
+char	*ft_strjoin(char const *s1, char const *s2);
 
 #endif
