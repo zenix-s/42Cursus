@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:54:42 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/13 21:58:32 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/14 16:08:58 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,12 +84,11 @@ size_t	ft_strlen(const char *str);
 char	*ft_strchr(const char *str, int chr);
 
 /**
- * Compara dos cadenas
+ * Busca un caracter en una cadena desde el final
  * @param str1 cadena 1
  * @param str2 cadena 2
  * @param len numero de caracteres a comparar
- * @return 0 si son iguales, <0 si str1 es menor que str2, 
- * >0 si str1 es mayor que str2
+ * @return Un puntero a la última aparición del carácter c en la cadena s.
 */
 char	*ft_strrchr(const char *str, int chr);
 
@@ -182,7 +181,7 @@ void	*ft_calloc(size_t count, size_t len);
  * @param len
  * @return
 */
-char	*ft_substr(char const *str, unsigned int start, size_t len);
+char	*ft_substr(const char *str, unsigned int start, size_t len);
 
 /**
  * Reserva (con malloc(3)) y devuelve una nueva string, 
@@ -191,6 +190,16 @@ char	*ft_substr(char const *str, unsigned int start, size_t len);
  * @param s2 Segunda cadena
  * @return Cadena concatenada
 */
-char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strjoin(const char *s1, const char *s2);
+
+/**
+ * Elimina todos los caracteres de la string ’set’ 
+ * desde el principio y desde el final de ’s1’, 
+ * hasta encontrar un caracter no perteneciente a ’set’.
+ * @param str Cadena a recortar
+ * @param set Caracteres a recortar
+ * @return String resultante se devuelve con una reserva de malloc(3)
+*/
+char	*ft_strtrim(const char *str, const char *set);
 
 #endif

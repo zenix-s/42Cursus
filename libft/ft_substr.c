@@ -18,9 +18,9 @@ char *ft_substr(const char *str, unsigned int start, size_t len)
 }
 
 
-int main(void)
-{
-	const char src[50] = "Hola mundo";
-	printf("%s", ft_substr(src, 5, 5));
-	return 0;
-}
+// int main(void)
+// {
+// 	const char src[50] = "Hola mundo";
+// 	printf("%s", ft_substr(src, 5, 5));
+// 	return 0;
+// }
