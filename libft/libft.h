@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:54:42 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/15 16:36:17 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/15 17:21:14 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -202,16 +202,16 @@ char	*ft_strjoin(const char *s1, const char *s2);
 */
 char	*ft_strtrim(const char *str, const char *set);
 
-// /**
-//  * ft_split
-//  * Reserva (con malloc(3)) y devuelve un array de strings
-//  * obtenidas al separar ’str’ mediante el carácter ’chr’,
-//  * El array debe terminar con NULL.
-//  * @param str Cadena a separar
-//  * @param chr Caracter separador
-//  * @return Array de strings resultante
-//  * 
-// */
-// char **ft_split(char const *str, char chr);
+/**
+ * ft_split
+ * Reserva (con malloc(3)) y devuelve un array de strings
+ * obtenidas al separar ’str’ mediante el carácter ’chr’,
+ * El array debe terminar con NULL.
+ * @param str Cadena a separar
+ * @param chr Caracter separador
+ * @return Array de strings resultante
+ * 
+*/
+char **ft_split(char const *str, char chr);
 
 #endif
