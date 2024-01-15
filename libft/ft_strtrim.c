@@ -6,36 +6,28 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 11:13:43 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/15 11:14:12 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/15 16:35:45 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(const char *str, const char *set)
+char *ft_strtrim(const char *str, const char *set)
 {
-	char	*new_str;
-	int		i;
-	int		j;
-	int		len;
+	char *new_str;
+	int len;
+	int start;
+	int end;
 
-	i = 0;
-	j = 0;
 	len = ft_strlen(str);
-	new_str = (char *)malloc(sizeof(char) * (len + 1));
-	if (new_str == NULL)
-		return (NULL);
-	while (str[i] != '\0' && ft_strchr(set, str[i]) != NULL)
-		i++;
-	while (str[len - 1] != '\0' && ft_strchr(set, str[len - 1]) != NULL)
-		len--;
-	while (i < len)
-	{
-		new_str[j] = str[i];
-		i++;
-		j++;
-	}
-	new_str[j] = '\0';
+	start = 0;
+	end = len - 1;
+	while (str[start] && ft_strchr(set, str[start]) != 0)
+		start++;
+	while (str[end] && ft_strchr(set, str[end]) != 0)
+		end--;
+	len = end - start + 1;
+	new_str = ft_substr(str, start, len);
 	return (new_str);
 }
 
