@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 10:45:37 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/15 10:45:53 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/15 12:15:44 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,9 @@ char	*ft_strrchr(const char *str, int chr)
 {
 	int	i;
 
-	i = ft_strlen((char *)str);
+	i = (int)ft_strlen(str) + 1;
 	while (i--)
-	{
-		if (str[i] == (char)chr)
-			return ((char *)&str[i]);
-	}
+		if (*(str + i) == (char)chr)
+			return ((char *)(str + i));
 	return (NULL);
 }
-
-// int main(void)
-// {
-// 	char str[] = "Hola mundo";
-// 	printf("%s\n", ft_strrchr(str, 'o'));
-// 	return 0;
-// }

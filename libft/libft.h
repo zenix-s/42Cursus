@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:54:42 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/15 10:29:18 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/15 12:31:14 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdio.h>
+# include <string.h>
 
 /**
  * Comprueba si un caracter es alfanumerico
@@ -103,14 +104,15 @@ char	*ft_strrchr(const char *str, int chr);
 int		ft_strncmp(const char *str1, const char *str2, size_t len);
 
 /**
- * Compara dos cadenas
- * @param str1 cadena 1
- * @param str2 cadena 2
- * @param len numero de caracteres a comparar
- * @return 0 si son iguales, <0 si str1 es menor que str2, 
- * >0 si str1 es mayor que str2
+ * Strnstr 
+ * Encuentra la primera aparición de la subcadena to_find en la cadena str.
+ * @param str Cadena en la que buscar.
+ * @param str_to_find Subcadena a buscar.
+ * @param len Numero de caracteres a comparar
+ * @return Retorna la posición de la primera aparición de str_to_find en str.
+ * Si no se encuentra la subcadena se devuelve NULL
 */
-int		ft_strnstr(const char *str, const char *str_to_find);
+char	*ft_strnstr(const char *str, const char *str_to_find, size_t len);
 
 /**
  * Copia una cadena en otra

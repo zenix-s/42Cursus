@@ -6,47 +6,30 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 10:49:07 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/15 10:49:30 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/15 11:42:49 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/**
- * Busca la primera aparición de la subcadena to_find en la cadena str.
- * @param str Cadena en la que buscar.
- * @param str_to_find Subcadena a buscar.
- * @return Retorna la posición de la primera aparición de str_to_find en str.
- */
-int	ft_strnstr(const char *str, const char *str_to_find)
+char	*ft_strnstr(const char *str, const char *str_to_find, size_t len)
 {
-	int	i;
-	int	j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	if (str_to_find[0] == '\0')
-		return (0);
-	while (str[i] != '\0')
+		return ((char *)str);
+	while (str[i] != '\0' && i < len)
 	{
 		j = 0;
-		while (str[i + j] == str_to_find[j])
+		while (str_to_find[j] == str[i + j] && i + j < len)
 		{
 			if (str_to_find[j + 1] == '\0')
-				return (i);
+				return ((char *)str + i);
 			j++;
 		}
 		i++;
 	}
-	return (-1);
+	return (0);
 }
-
-// int main(void)
-// {
-//   char str[50] = "Hola mundo";
-//   char str_to_find[50] = "mundo";
-
-//   printf("Antes strnstr  = %s\n", str);
-//   printf("Despues strnstr = %s\n", str_to_find);
-//   printf("Resultado strnstr = %d\n", ft_strnstr(str, str_to_find));
-//   return 0;
-// }

@@ -6,15 +6,12 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:30:40 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/15 10:41:48 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/15 11:28:14 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/**
- * Convierte una letra mayúscula a minúscula.
- * @param chr Caracter a convertir.
- * @return Caracter convertido.
- */
+#include "libft.h"
+
 int	ft_tolower(int chr)
 {
 	if (chr >= 'A' && chr <= 'Z')

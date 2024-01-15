@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 11:12:26 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/15 11:12:45 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/15 12:05:06 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,22 +24,13 @@ int	ft_atoi(const char *str)
 	while ((str[i] >= 9 && str[i] <= 13) || str[i] == ' ')
 		i++;
 	if (str[i] == '-')
-	{
-		sign *= -1;
+		sign = -sign;
+	if ((str[i] == '-') || (str[i] == '+'))
 		i++;
-	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		result = result * 10 + (str[i] - '0');
+		result = (result * 10) + (str[i] - '0');
 		i++;
 	}
 	return (result * sign);
 }
-
-// int main(void)
-// {
-// 	char str[50] = "    -123456789";
-// 	printf("atoi = %d\n", ft_atoi(str));
-
-// 	return 0;
-// }

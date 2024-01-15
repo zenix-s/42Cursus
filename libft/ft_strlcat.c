@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 17:49:36 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/13 22:00:37 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/15 11:50:09 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t len)
 	dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
 	total_len = dst_len + src_len;
+	if (len == 0)
+		return (src_len);
 	i = 0;
 	while (dst_len < len - 1 && src[i] != '\0')
 	{
