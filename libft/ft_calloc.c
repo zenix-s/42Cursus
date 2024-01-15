@@ -15,9 +15,13 @@ void *ft_calloc(size_t count, size_t len)
 
 // int main(void)
 // {
-//   char *ptr;
+// 	char *ptr;
 
-//   ptr = ft_calloc(5, sizeof(char));
-//   printf("ptr = %s\n", ptr);
-//   return 0;
+// 	ptr = ft_calloc(10, sizeof(char));
+// 	if (ptr == NULL)
+// 		return 1;
+// 	ft_strlcpy(ptr, "Hola", 5);
+// 	printf("%s\n", ptr);
+// 	free(ptr);
+// 	return 0;
 // }
