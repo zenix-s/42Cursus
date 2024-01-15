@@ -6,16 +6,40 @@
 #    By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/15 09:27:02 by serferna          #+#    #+#              #
-#    Updated: 2024/01/15 10:16:20 by serferna         ###   ########.fr        #
+#    Updated: 2024/01/15 10:25:01 by serferna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	libft.a
 CC			=	gcc
 CFLAGS	=	-Wall -Wextra -Werror
-SRC 		=	ft_atoi.c /
+SRC 		=	ft_isalpha.c /
+					ft_isdigit.c /
+					ft_isalnum.c /
+					ft_isascii.c /
+					ft_isprint.c /
+					ft_toupper.c /
+					ft_tolower.c /
+					ft_strlen.c /
+					ft_strchr.c /
+					ft_strrchr.c /
+					ft_strncmp.c /
+					ft_strnstr.c /
+					ft_strlcpy.c /
+					ft_strlcat.c /
+					ft_strdup.c /
+					ft_memset.c /
 					ft_bzero.c /
+					ft_memcpy.c /
+					ft_memmove.c /
+					ft_memchr.c /
+					ft_memcmp.c /
+					ft_atoi.c /
 					ft_calloc.c /
+					ft_substr.c /
+					ft_strjoin.c /
+					ft_strtrim.c /
+
 OBJ 		=	$(SRC:.c=.o)
 all : $(NAME)
 $(NAME) : $(OBJ)

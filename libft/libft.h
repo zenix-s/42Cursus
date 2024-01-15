@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:54:42 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/14 16:08:58 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/15 10:22:46 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,16 +101,6 @@ char	*ft_strrchr(const char *str, int chr);
  * >0 si str1 es mayor que str2
 */
 int		ft_strncmp(const char *str1, const char *str2, size_t len);
-
-/**
- * Compara dos cadenas
- * @param str1 cadena 1
- * @param str2 cadena 2
- * @param len numero de caracteres a comparar
- * @return 0 si son iguales, <0 si str1 es menor que str2, 
- * >0 si str1 es mayor que str2
-*/
-char	*ft_strchr(const char *str, int chr);
 
 /**
  * Compara dos cadenas
