@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/15 10:49:07 by serferna          #+#    #+#             */
+/*   Updated: 2024/01/15 10:49:30 by serferna         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 /**
@@ -5,27 +17,27 @@
  * @param str Cadena en la que buscar.
  * @param str_to_find Subcadena a buscar.
  * @return Retorna la posición de la primera aparición de str_to_find en str.
-*/
-int ft_strnstr(const char *str, const char *str_to_find)
+ */
+int	ft_strnstr(const char *str, const char *str_to_find)
 {
-  int i;
-  int j;
+	int	i;
+	int	j;
 
-  i = 0;
-  if (str_to_find[0] == '\0')
-    return 0;
-  while (str[i] != '\0')
-  {
-    j = 0;
-    while (str[i + j] == str_to_find[j])
-    {
-      if (str_to_find[j + 1] == '\0')
-        return i;
-      j++;
-    }
-    i++;
-  }
-  return -1;
+	i = 0;
+	if (str_to_find[0] == '\0')
+		return (0);
+	while (str[i] != '\0')
+	{
+		j = 0;
+		while (str[i + j] == str_to_find[j])
+		{
+			if (str_to_find[j + 1] == '\0')
+				return (i);
+			j++;
+		}
+		i++;
+	}
+	return (-1);
 }
 
 // int main(void)

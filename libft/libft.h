@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:54:42 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/15 10:22:46 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/15 10:29:18 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,6 +130,9 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t len);
 */
 size_t	ft_strlcat(char *dst, const char *src, size_t len);
 
+/**
+ * @param 
+*/
 char	*ft_strdup(const char *str);
 
 void	*ft_memset(void *ptr, int chr, size_t len);

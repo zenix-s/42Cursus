@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 18:23:21 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/12 15:09:15 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/15 10:52:45 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,16 @@
  */
 void	*ft_memset(void *ptr, int chr, size_t len)
 {
-  unsigned char	*p;
-  unsigned char	value;
+	unsigned char	*p;
+	unsigned char	value;
 
-  p = ptr;
-  value = (unsigned char)chr;
-  while (len--)
-  {
-    *p++ = value;
-  }
-  return (ptr);
+	p = ptr;
+	value = (unsigned char)chr;
+	while (len--)
+	{
+		*p++ = value;
+	}
+	return (ptr);
 }
 
 // int main(void)

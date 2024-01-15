@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 11:15:40 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/12 10:20:05 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/15 10:34:18 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,13 @@
  * Comprueba si el caracter es alfanumerico
  * @param chr caracter a comprobar
  * @return 1 si es alfanumerico, 0 si no lo es
- 
+
 */
-int ft_isalpha(int chr)
+int	ft_isalpha(int chr)
 {
 	if ((chr >= 'a' && chr <= 'z') || (chr >= 'A' && chr <= 'Z'))
 	{
 		return (1);
 	}
-	else
-	{
-		return (0);
-	}
+	return (0);
 }

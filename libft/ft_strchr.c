@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:49:05 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/12 15:08:49 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/15 10:45:05 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 char	*ft_strchr(const char *str, int chr)
 {
-  while (*str)
-  {
-    if (*str == (char)chr)
-      return ((char *)str);
-    str++;
-  }
-  if (*str == (char)chr)
-    return ((char *)str);
-  return (NULL);
+	while (*str)
+	{
+		if (*str == (char)chr)
+			return ((char *)str);
+		str++;
+	}
+	if (*str == (char)chr)
+		return ((char *)str);
+	return (NULL);
 }
 
 // int main(void)

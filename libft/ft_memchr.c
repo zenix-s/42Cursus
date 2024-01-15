@@ -1,20 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/15 11:02:14 by serferna          #+#    #+#             */
+/*   Updated: 2024/01/15 11:02:58 by serferna         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-/**
- * Busca la primera ocurrencia de un caracter en un área de memoria.
- * @param ptr Puntero al área de memoria a buscar.
- * @param chr Caracter a buscar.
- * @param len Número de bytes a buscar.
- * @return Puntero al byte encontrado, NULL si no se encuentra.
-*/
-void *ft_memchr(const void *ptr, int chr, size_t len)
+void	*ft_memchr(const void *ptr, int chr, size_t len)
 {
-  unsigned char *p = (unsigned char *)ptr;
-  while (len--)
-  {
-    if (*p == (unsigned char)chr)
-      return (void *)p;
-    p++;
-  }
-  return NULL;
+	unsigned char	*p;
+
+	p = (unsigned char *)ptr;
+	while (len--)
+	{
+		if (*p == (unsigned char)chr)
+			return ((void *)p);
+		p++;
+	}
+	return (NULL);
 }

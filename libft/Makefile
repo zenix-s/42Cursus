@@ -6,7 +6,7 @@
 #    By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/15 09:27:02 by serferna          #+#    #+#              #
-#    Updated: 2024/01/15 10:25:01 by serferna         ###   ########.fr        #
+#    Updated: 2024/01/15 10:58:36 by serferna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,8 +14,8 @@ NAME		=	libft.a
 CC			=	gcc
 CFLAGS	=	-Wall -Wextra -Werror
 SRC 		=	ft_isalpha.c /
-					ft_isdigit.c /
 					ft_isalnum.c /
+					ft_isdigit.c /
 					ft_isascii.c /
 					ft_isprint.c /
 					ft_toupper.c /
@@ -50,7 +50,10 @@ $(NAME) : $(OBJ)
 
 clean :
 	@rm -f $(OBJ)
+	
 fclean : clean
 	@rm -f $(NAME)
+
 re : fclean all
+
 .PHONY : all clean fclean re
