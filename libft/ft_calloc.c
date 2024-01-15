@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 11:13:09 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/15 11:13:23 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/15 12:53:01 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,24 +16,9 @@ void	*ft_calloc(size_t count, size_t len)
 {
 	void	*ptr;
 
-	if (count == 0 || len == 0)
-		return (NULL);
 	ptr = malloc(count * len);
-	if (ptr == NULL)
-		return (NULL);
+	if (ptr == 0)
+		return (0);
 	ft_bzero(ptr, count * len);
 	return (ptr);
 }
-
-// int main(void)
-// {
-// 	char *ptr;
-
-// 	ptr = ft_calloc(10, sizeof(char));
-// 	if (ptr == NULL)
-// 		return 1;
-// 	ft_strlcpy(ptr, "Hola", 5);
-// 	printf("%s\n", ptr);
-// 	free(ptr);
-// 	return 0;
-// }
