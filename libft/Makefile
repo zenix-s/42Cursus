@@ -6,7 +6,7 @@
 #    By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/15 09:27:02 by serferna          #+#    #+#              #
-#    Updated: 2024/01/15 10:58:36 by serferna         ###   ########.fr        #
+#    Updated: 2024/01/15 11:24:10 by serferna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,19 +40,22 @@ SRC 		=	ft_isalpha.c /
 					ft_strjoin.c /
 					ft_strtrim.c /
 
+
 OBJ 		=	$(SRC:.c=.o)
+
 all : $(NAME)
+
 $(NAME) : $(OBJ)
-	@ar rc $(NAME) $(OBJ)
-	@ranlib $(NAME)
-%.o : %.c
+	@ar rcs $(NAME) $(OBJ)
+
+$(OBJ) : %.o : %.c
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean :
-	@rm -f $(OBJ)
+	rm -rf $(OBJ)
 	
 fclean : clean
-	@rm -f $(NAME)
+	@rm -rf $(NAME)
 
 re : fclean all
 
