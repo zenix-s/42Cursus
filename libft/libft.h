@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:54:42 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/15 12:31:14 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/15 13:30:44 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <string.h>
+# include <limits.h>
 
 /**
  * Comprueba si un caracter es alfanumerico
@@ -75,21 +76,22 @@ int		ft_tolower(int chr);
 size_t	ft_strlen(const char *str);
 
 /**
- * Compara dos cadenas
- * @param str1 cadena 1
- * @param str2 cadena 2
- * @param len numero de caracteres a comparar
- * @return 0 si son iguales, <0 si str1 es menor que str2, 
- * >0 si str1 es mayor que str2
+ * strchr
+ * Busca un caracter en una cadena
+ * @param str Cadena en la que buscar.
+ * @param chr Caracter a buscar.
+ * @return Retorna un puntero a la primera aparición del carácter en la cadena.
+ * Si no se encuentra el carácter se devuelve NULL
 */
 char	*ft_strchr(const char *str, int chr);
 
 /**
- * Busca un caracter en una cadena desde el final
- * @param str1 cadena 1
- * @param str2 cadena 2
- * @param len numero de caracteres a comparar
- * @return Un puntero a la última aparición del carácter c en la cadena s.
+ * strrchr
+ * Busca un caracter en una cadena empezando por el final
+ * @param str Cadena en la que buscar.
+ * @param chr Caracter a buscar.
+ * @return Retorna un puntero a la primera aparición del carácter en la cadena.
+ * Si no se encuentra el carácter se devuelve NULL
 */
 char	*ft_strrchr(const char *str, int chr);
 
@@ -133,7 +135,10 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t len);
 size_t	ft_strlcat(char *dst, const char *src, size_t len);
 
 /**
- * @param 
+ * strdup
+ * Reserva memoria con malloc y copia una cadena en ella
+ * @param str cadena a copiar
+ * @return puntero a la cadena copiada 
 */
 char	*ft_strdup(const char *str);
 

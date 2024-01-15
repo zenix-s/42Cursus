@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 10:50:10 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/15 11:49:28 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/15 14:20:18 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t len)
 	size_t	i;
 
 	i = 0;
-	if (!dst || !src)
-		return (0);
 	if (len == 0)
 		return (ft_strlen(src));
 	while (src[i] != '\0' && i < len - 1)
