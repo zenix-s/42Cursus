@@ -1,8 +1,8 @@
 #include "libft.h"
 
-int ft_numlen(int num)
+int	ft_numlen(int num)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	if (num == 0)
@@ -17,11 +17,11 @@ int ft_numlen(int num)
 	return (len);
 }
 
-char *ft_itoa(int num)
+char	*ft_itoa(int num)
 {
-	char *str;
-	int len;
-	int sign;
+	char	*str;
+	int		len;
+	int		sign;
 
 	sign = 1;
 	len = ft_numlen(num);

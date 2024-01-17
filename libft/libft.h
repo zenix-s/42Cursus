@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:54:42 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/17 10:47:01 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/17 10:52:41 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -221,6 +221,6 @@ char	**ft_split(char const *str, char chr);
  * @param num Entero a convertir
  * @return Cadena resultante
 */
-char 	*ft_itoa(int num);
+char	*ft_itoa(int num);
 
 #endif
