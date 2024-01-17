@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 11:13:43 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/15 16:38:19 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/17 10:29:45 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strtrim(const char *str, const char *set)
 	end = len - 1;
 	while (str[start] && ft_strchr(set, str[start]) != 0)
 		start++;
-	while (str[end] && ft_strchr(set, str[end]) != 0)
+	while (end > start && str[end] && ft_strchr(set, str[end]) != 0)
 		end--;
 	len = end - start + 1;
 	new_str = ft_substr(str, start, len);
