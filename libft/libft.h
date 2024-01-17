@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:54:42 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/17 09:51:12 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/17 10:47:01 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -213,5 +213,14 @@ char	*ft_strtrim(const char *str, const char *set);
  * 
 */
 char	**ft_split(char const *str, char chr);
+
+/**
+ * ft_itoa
+ * Convierte un entero a una cadena y reserva memoria con malloc(3)
+ * Se contemplan los numeros negativos
+ * @param num Entero a convertir
+ * @return Cadena resultante
+*/
+char 	*ft_itoa(int num);
 
 #endif
