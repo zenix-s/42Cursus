@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:54:42 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/15 17:21:14 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/17 09:51:12 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -212,6 +212,6 @@ char	*ft_strtrim(const char *str, const char *set);
  * @return Array de strings resultante
  * 
 */
-char **ft_split(char const *str, char chr);
+char	**ft_split(char const *str, char chr);
 
 #endif
