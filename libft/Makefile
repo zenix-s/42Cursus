@@ -6,7 +6,7 @@
 #    By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/15 09:27:02 by serferna          #+#    #+#              #
-#    Updated: 2024/01/15 21:18:30 by serferna         ###   ########.fr        #
+#    Updated: 2024/01/17 10:50:01 by serferna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,6 +40,7 @@ SRC 		=	ft_isalpha.c \
 				ft_strjoin.c \
 				ft_strtrim.c \
 				ft_split.c \
+				ft_itoa.c \
 
 OBJ 		=	$(SRC:.c=.o)
 
