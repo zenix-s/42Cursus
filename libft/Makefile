@@ -6,7 +6,7 @@
 #    By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/15 09:27:02 by serferna          #+#    #+#              #
-#    Updated: 2024/01/17 10:50:01 by serferna         ###   ########.fr        #
+#    Updated: 2024/01/18 14:31:57 by serferna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,10 +41,23 @@ SRC 		=	ft_isalpha.c \
 				ft_strtrim.c \
 				ft_split.c \
 				ft_itoa.c \
+				ft_strmapi.c \
+				ft_striteri.c \
+				ft_putchar_fd.c \
+				ft_putstr_fd.c \
+				ft_putendl_fd.c \
+				ft_putnbr_fd.c \
+
+BONUSRC = ft_lstnew.c \
+
+
 
 OBJ 		=	$(SRC:.c=.o)
+BOBJ 		=	$(BONUSRC:.c=.o)
 
 all : $(NAME)
+
+bonus : $(obj) 
 
 $(NAME) : $(OBJ)
 	@ar rcs $(NAME) $(OBJ)
