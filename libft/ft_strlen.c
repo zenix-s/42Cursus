@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+
 /**
  * Calcula la longitud de una cadena
  * @param str cadena a calcular

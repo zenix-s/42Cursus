@@ -12,7 +12,6 @@
 
 #include "libft.h"
 
-
 int	ft_strncmp(const char *str1, const char *str2, size_t len)
 {
 	while (len > 0 && *str1 && (*str1 == *str2))
@@ -27,4 +26,3 @@ int	ft_strncmp(const char *str1, const char *str2, size_t len)
 	}
 	return (*(unsigned char *)str1 - *(unsigned char *)str2);
 }
-

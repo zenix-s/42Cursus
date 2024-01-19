@@ -18,4 +18,3 @@ int	ft_tolower(int chr)
 		chr += 32;
 	return (chr);
 }
-

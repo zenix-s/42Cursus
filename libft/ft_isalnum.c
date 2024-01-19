@@ -18,4 +18,3 @@ int	ft_isalnum(int chr)
 		return (1);
 	return (0);
 }
-

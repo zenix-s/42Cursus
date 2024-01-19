@@ -33,9 +33,9 @@ int	ft_count_words(char const *str, char chr)
 	return (num_word);
 }
 
-void ft_free_words(char **words)
+void	ft_free_words(char **words)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (words[i])
@@ -54,7 +54,6 @@ char	**ft_split(char const *str, char chr)
 
 	if (!str)
 		return (0);
-
 	words = ft_calloc(ft_count_words(str, chr) + 1, sizeof(char *));
 	if (!words)
 		return (NULL);

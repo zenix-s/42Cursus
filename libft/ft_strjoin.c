@@ -14,10 +14,10 @@
 
 char	*ft_strjoin(const char *s1, const char *s2)
 {
-	char		*str;
-	size_t		len1;
-	size_t		len2;
-	size_t		i;
+	char	*str;
+	size_t	len1;
+	size_t	len2;
+	size_t	i;
 
 	len1 = ft_strlen(s1);
 	len2 = ft_strlen(s2);
@@ -39,4 +39,3 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	str[len1 + len2] = '\0';
 	return (str);
 }
-

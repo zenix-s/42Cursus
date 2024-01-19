@@ -18,4 +18,3 @@ int	ft_toupper(int chr)
 		chr -= 32;
 	return (chr);
 }
-
