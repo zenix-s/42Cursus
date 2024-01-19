@@ -6,13 +6,16 @@
 #    By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/15 09:27:02 by serferna          #+#    #+#              #
-#    Updated: 2024/01/18 14:31:57 by serferna         ###   ########.fr        #
+#    Updated: 2024/01/19 11:40:20 by serferna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	libft.a
 CC			=	gcc
-CFLAGS		=	-Wall -Wextra -Werror
+CFLAGS	=	-Wall -Wextra -Werror
+INCLUDE = libft.h
+AR			=	ar -rc
+RM 			=	rm -f
 SRC 		=	ft_isalpha.c \
 				ft_isalnum.c \
 				ft_isdigit.c \
@@ -57,20 +60,24 @@ BOBJ 		=	$(BONUSRC:.c=.o)
 
 all : $(NAME)
 
-bonus : $(obj) 
+bonus : $(OBJ) $(BOBJ)
+	$(AR) -r $(NAME) $?
 
-$(NAME) : $(OBJ)
-	@ar rcs $(NAME) $(OBJ)
+
+$(NAME) : $(OBJ) $(INCLUDE)
+	$(AR) $(NAME) $(OBJ)
 
 $(OBJ) : %.o : %.c
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean :
-	rm -rf $(OBJ)
+	$(RM) $(OBJ)
+	$(RM) $(BOBJ)
 	
 fclean : clean
-	@rm -rf $(NAME)
+	$(RM) $(NAME)
 
 re : fclean all
+rebonus : fclean bonus
 
-.PHONY : all clean fclean re
+.PHONY : all clean fclean re bonus rebonus
