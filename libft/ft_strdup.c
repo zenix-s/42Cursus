@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 10:50:58 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/15 10:51:49 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/19 10:09:59 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,3 @@ char	*ft_strdup(const char *str)
 	return (ptr);
 }
 
-// int main(void)
-// {
-// 	char *str = "hola mundo";
-// 	char *ptr = ft_strdup(str);
-// 	printf("%s\n", ptr);
-// }

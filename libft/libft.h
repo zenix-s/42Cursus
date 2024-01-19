@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:54:42 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/18 14:22:49 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/19 10:03:37 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,24 @@
 # define LIBFT_H
 
 # include <limits.h>
-# include <stdio.h>
-# include <stdlib.h>
-# include <string.h>
-# include <unistd.h>
+// # include <stdio.h>
+// # include <stdlib.h>
+// # include <string.h>
+// # include <unistd.h>
+
+/**
+ * Se define NULL como (void *)0
+ * En c un null pointer es 0
+ * Esto puede variar dependiendo del sistema
+ * Castearlo a (void *) garantiza que sea 0 
+ */ 
+#define NULL ((void *)0)
+
+/**
+ * Se define unsigned long como size_t
+ * 0 - 4,294,967,295 (2^32 - 1)
+*/
+typedef unsigned long	size_t;
 
 typedef struct s_list
 {

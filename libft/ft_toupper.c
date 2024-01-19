@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:18:42 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/15 11:28:21 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/19 10:09:59 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,3 @@ int	ft_toupper(int chr)
 	return (chr);
 }
 
-// int main(void)
-// {
-//   char c = 'a';
-//   printf("%c\n", ft_toupper(c));
-//   return 0;
-// }

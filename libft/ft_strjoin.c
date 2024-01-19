@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 11:14:21 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/15 11:14:57 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/19 10:09:59 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,12 +40,3 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	return (str);
 }
 
-// int main(void)
-// {
-// 	char *s1 = "Hola";
-// 	char *s2 = "Mundo";
-// 	char *s3 = ft_strjoin(s1, s2);
-// 	printf("%s\n", s3);
-// 	free(s3);
-// 	return (0);
-// }

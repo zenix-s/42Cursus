@@ -6,16 +6,12 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 12:21:23 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/15 10:37:10 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/19 10:09:59 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/**
- * Comprueba si el caracter es un digito
- * @param chr caracter a comprobar
- * @return 1 si es un digito, 0 si no lo es
- */
+
 int	ft_isdigit(int chr)
 {
 	if (chr >= '0' && chr <= '9')

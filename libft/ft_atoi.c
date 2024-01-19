@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 11:12:26 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/15 14:11:51 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/19 10:07:28 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,3 @@ int	ft_atoi(const char *str)
 	}
 	return (result * sign);
 }
-
-// int main(void)
-// {
-// 	char str[] = "-0";
-// 	printf("Atoi: %d\n", atoi(str));
-// 	printf("Ft_Atoi: %d\n", ft_atoi(str));
-// 	return 0;
-// }

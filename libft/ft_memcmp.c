@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 11:03:39 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/15 11:11:59 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/19 10:09:59 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,3 @@ int	ft_memcmp(const void *str1, const void *str2, size_t len)
 	return (0);
 }
 
-// int main(void)
-// {
-//   char *str1 = "Hello";
-//   char *str2 = "Hello World";
-
-//   printf("%d\n", ft_memcmp(str1, str2, 5));
-// }
