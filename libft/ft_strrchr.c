@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 10:45:37 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/19 09:32:14 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/19 19:24:20 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,5 @@ char	*ft_strrchr(const char *str, int chr)
 	while (i--)
 		if (*(str + i) == (char)chr)
 			return ((char *)(str + i));
-	return (0);
+	return (NULL);
 }

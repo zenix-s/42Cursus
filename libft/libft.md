@@ -195,3 +195,6 @@ Parametros: const char *str, int chr
 - str Cadena de caracteres sobre la que se va a buscar chr
 - chr Caracter que se va a buscar en str
 
+```c
+
+```
