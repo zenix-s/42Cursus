@@ -21,65 +21,65 @@
 
 typedef struct s_list
 {
-	void				*content;
-	struct s_list		*next;
-}						t_list;
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 
 /**
  * Comprueba si un caracter es alfanumerico
  * @param chr caracter a comprobar
  * @return 1 si es alfanumerico, 0 si no lo es
  */
-int						ft_isalpha(int chr);
+int					ft_isalpha(int chr);
 
 /**
  * Comprueba si un caracter es numerico
  * @param chr caracter a comprobar
  * @return 1 si es numerico, 0 si no lo es
  */
-int						ft_isdigit(int chr);
+int					ft_isdigit(int chr);
 
 /**
  * Comprueba si un caracter es alfanumerico
  * @param chr caracter a comprobar
  * @return 1 si es alfanumerico, 0 si no lo es
  */
-int						ft_isalnum(int chr);
+int					ft_isalnum(int chr);
 
 /**
  * Comprueba si un caracter es imprimible
  * @param chr caracter a comprobar
  * @return 1 si es imprimible, 0 si no lo es
  */
-int						ft_isascii(int chr);
+int					ft_isascii(int chr);
 
 /**
  * Comprueba si un caracter es imprimible
  * @param chr caracter a comprobar
  * @return 1 si es imprimible, 0 si no lo es
  */
-int						ft_isprint(int chr);
+int					ft_isprint(int chr);
 
 /**
  * Convierte un caracter a mayusculas
  * @param chr caracter a convertir
  * @return caracter convertido
  */
-int						ft_toupper(int chr);
+int					ft_toupper(int chr);
 
 /**
  * Convierte un caracter a minusculas
  * @param chr caracter a convertir
  * @return caracter convertido
  */
-int						ft_tolower(int chr);
+int					ft_tolower(int chr);
 
 /**
  * Calcula la longitud de una cadena
  * @param str cadena a calcular
  * @return longitud de la cadena
  */
-size_t					ft_strlen(const char *str);
+size_t				ft_strlen(const char *str);
 
 /**
  * strchr
@@ -89,7 +89,7 @@ size_t					ft_strlen(const char *str);
  * @return Retorna un puntero a la primera aparición del carácter en la cadena.
  * Si no se encuentra el carácter se devuelve NULL
  */
-char					*ft_strchr(const char *str, int chr);
+char				*ft_strchr(const char *str, int chr);
 
 /**
  * strrchr
@@ -99,7 +99,7 @@ char					*ft_strchr(const char *str, int chr);
  * @return Retorna un puntero a la primera aparición del carácter en la cadena.
  * Si no se encuentra el carácter se devuelve NULL
  */
-char					*ft_strrchr(const char *str, int chr);
+char				*ft_strrchr(const char *str, int chr);
 
 /**
  * Compara dos cadenas
@@ -109,8 +109,7 @@ char					*ft_strrchr(const char *str, int chr);
  * @return 0 si son iguales, <0 si str1 es menor que str2,
  * >0 si str1 es mayor que str2
  */
-int						ft_strncmp(const char *str1, const char *str2,
-							size_t len);
+int					ft_strncmp(const char *str1, const char *str2, size_t len);
 
 /**
  * Strnstr
@@ -121,8 +120,8 @@ int						ft_strncmp(const char *str1, const char *str2,
  * @return Retorna la posición de la primera aparición de str_to_find en str.
  * Si no se encuentra la subcadena se devuelve NULL
  */
-char					*ft_strnstr(const char *str, const char *str_to_find,
-							size_t len);
+char				*ft_strnstr(const char *str, const char *str_to_find,
+						size_t len);
 
 /**
  * Copia una cadena en otra
@@ -131,7 +130,7 @@ char					*ft_strnstr(const char *str, const char *str_to_find,
  * @param len numero de caracteres a copiar
  * @return longitud de la cadena copiada
  */
-size_t					ft_strlcpy(char *dst, const char *src, size_t len);
+size_t				ft_strlcpy(char *dst, const char *src, size_t len);
 
 /**
  * Concatena dos cadenas
@@ -140,7 +139,7 @@ size_t					ft_strlcpy(char *dst, const char *src, size_t len);
  * @param len numero de caracteres a copiar
  * @return longitud de la cadena copiada
  */
-size_t					ft_strlcat(char *dst, const char *src, size_t len);
+size_t				ft_strlcat(char *dst, const char *src, size_t len);
 
 /**
  * strdup
@@ -148,7 +147,7 @@ size_t					ft_strlcat(char *dst, const char *src, size_t len);
  * @param str cadena a copiar
  * @return puntero a la cadena copiada
  */
-char					*ft_strdup(const char *str);
+char				*ft_strdup(const char *str);
 
 /**
  * Memset
@@ -159,7 +158,7 @@ char					*ft_strdup(const char *str);
  * @param len Número de bytes a establecer.
  * @return Puntero a la cadena establecida
  */
-void					*ft_memset(void *ptr, int chr, size_t len);
+void				*ft_memset(void *ptr, int chr, size_t len);
 
 /**
  * Bzero
@@ -168,7 +167,7 @@ void					*ft_memset(void *ptr, int chr, size_t len);
  * @param ptr Puntero al área de memoria a establecer.
  * @param len Número de bytes a establecer.
  */
-void					ft_bzero(void *ptr, size_t len);
+void				ft_bzero(void *ptr, size_t len);
 
 /**
  * Memcpy
@@ -178,7 +177,7 @@ void					ft_bzero(void *ptr, size_t len);
  * @param len numero de bytes a copiar
  * @return puntero a la cadena destino
  */
-void					*ft_memcpy(void *dest, const void *src, size_t len);
+void				*ft_memcpy(void *dest, const void *src, size_t len);
 
 /**
  * Memmove
@@ -189,12 +188,11 @@ void					*ft_memcpy(void *dest, const void *src, size_t len);
  * @param len numero de bytes a copiar
  * @return puntero a la cadena destino
  */
-void					*ft_memmove(void *dest, const void *src, size_t len);
+void				*ft_memmove(void *dest, const void *src, size_t len);
 
-void					*ft_memchr(const void *ptr, int chr, size_t len);
+void				*ft_memchr(const void *ptr, int chr, size_t len);
 
-int						ft_memcmp(const void *ptr1, const void *ptr2,
-							size_t len);
+int					ft_memcmp(const void *ptr1, const void *ptr2, size_t len);
 
 /**
  * Convierte una cadena str a un entero
@@ -205,7 +203,7 @@ int						ft_memcmp(const void *ptr1, const void *ptr2,
  * @return entero convertido
  *
  */
-int						ft_atoi(const char *str);
+int					ft_atoi(const char *str);
 
 /**
  * Reserva memoria con malloc y la inicializa a 0
@@ -213,7 +211,7 @@ int						ft_atoi(const char *str);
  * @param len tamaño de cada elemento
  * @return puntero a la memoria reservada
  */
-void					*ft_calloc(size_t count, size_t len);
+void				*ft_calloc(size_t count, size_t len);
 
 /**
  * Reserva (con malloc(3)) y devuelve una substring de la string ’s’.
@@ -224,8 +222,7 @@ void					*ft_calloc(size_t count, size_t len);
  * @param len
  * @return
  */
-char					*ft_substr(const char *str, unsigned int start,
-							size_t len);
+char				*ft_substr(const char *str, unsigned int start, size_t len);
 
 /**
  * Reserva (con malloc(3)) y devuelve una nueva string,
@@ -234,7 +231,7 @@ char					*ft_substr(const char *str, unsigned int start,
  * @param s2 Segunda cadena
  * @return Cadena concatenada
  */
-char					*ft_strjoin(const char *s1, const char *s2);
+char				*ft_strjoin(const char *s1, const char *s2);
 
 /**
  * Elimina todos los caracteres de la string ’set’
@@ -244,7 +241,7 @@ char					*ft_strjoin(const char *s1, const char *s2);
  * @param set Caracteres a recortar
  * @return String resultante se devuelve con una reserva de malloc(3)
  */
-char					*ft_strtrim(const char *str, const char *set);
+char				*ft_strtrim(const char *str, const char *set);
 
 /**
  * ft_split
@@ -256,7 +253,7 @@ char					*ft_strtrim(const char *str, const char *set);
  * @return Array de strings resultante
  *
  */
-char					**ft_split(char const *str, char chr);
+char				**ft_split(char const *str, char chr);
 
 /**
  * ft_itoa
@@ -265,20 +262,19 @@ char					**ft_split(char const *str, char chr);
  * @param num Entero a convertir
  * @return Cadena resultante
  */
-char					*ft_itoa(int num);
+char				*ft_itoa(int num);
 
-char					*ft_strmapi(const char *str, char (*f)(unsigned int,
-								char));
+char				*ft_strmapi(const char *str, char (*f)(unsigned int, char));
 
-void					ft_striteri(char *str, void (*f)(unsigned int, char *));
+void				ft_striteri(char *str, void (*f)(unsigned int, char *));
 
-void					ft_putchar_fd(char c, int fd);
+void				ft_putchar_fd(char c, int fd);
 
-void					ft_putstr_fd(char *s, int fd);
+void				ft_putstr_fd(char *s, int fd);
 
-void					ft_putendl_fd(char *s, int fd);
+void				ft_putendl_fd(char *s, int fd);
 
-void					ft_putnbr_fd(int n, int fd);
+void				ft_putnbr_fd(int n, int fd);
 
 /**
  * Crea un nuevo nodo utilizando malloc(3).
@@ -287,20 +283,20 @@ void					ft_putnbr_fd(int n, int fd);
  * @param content Contenido del nodo nuevo
  * @return Nuevo nodo
  */
-t_list					*ft_lstnew(void *content);
+t_list				*ft_lstnew(void *content);
 
 /**
  * Añade el nodo ’new’ al principio de la lista ’lst’
  * @param lst  dirección de un puntero al primer nodo de una lista.
  * @param new  un puntero al nodo que añadir al principio de la lista.
-*/
-void					ft_lstadd_front(t_list **lst, t_list *new);
+ */
+void				ft_lstadd_front(t_list **lst, t_list *new);
 
 /**
  * Cuenta el número de nodos de una lista.
  * @param lst  inicio de la lista.
  * @return número de nodos.
-*/
-int						ft_lstsize(t_list *lst);
+ */
+int					ft_lstsize(t_list *lst);
 
 #endif
