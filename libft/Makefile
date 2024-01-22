@@ -6,7 +6,7 @@
 #    By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/15 09:27:02 by serferna          #+#    #+#              #
-#    Updated: 2024/01/19 11:40:20 by serferna         ###   ########.fr        #
+#    Updated: 2024/01/22 15:11:06 by serferna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,14 +61,14 @@ BOBJ 		=	$(BONUSRC:.c=.o)
 all : $(NAME)
 
 bonus : $(OBJ) $(BOBJ)
-	$(AR) -r $(NAME) $?
+	$(AR) $(NAME) $?
 
+
+%.o:%.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME) : $(OBJ) $(INCLUDE)
 	$(AR) $(NAME) $(OBJ)
-
-$(OBJ) : %.o : %.c
-	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean :
 	$(RM) $(OBJ)
@@ -80,4 +80,5 @@ fclean : clean
 re : fclean all
 rebonus : fclean bonus
 
+# .PHONY : all clean fclean re
 .PHONY : all clean fclean re bonus rebonus

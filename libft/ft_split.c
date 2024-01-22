@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 14:32:16 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/19 09:54:33 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/22 15:25:02 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,10 +46,29 @@ void	ft_free_words(char **words)
 	free(words);
 }
 
+int	ft_process_word(char const **str, char chr, char **word)
+{
+	int	w_len;
+
+	w_len = 0;
+	while (**str != chr && **str != '\0')
+	{
+		w_len++;
+		(*str)++;
+	}
+	if (w_len > 0)
+	{
+		*word = ft_calloc(w_len + 1, sizeof(char));
+		if (!*word)
+			return (0);
+		ft_strlcpy(*word, *str - w_len, w_len + 1);
+	}
+	return (1);
+}
+
 char	**ft_split(char const *str, char chr)
 {
 	int		num_words;
-	int		w_len;
 	char	**words;
 
 	if (!str)
@@ -62,24 +81,15 @@ char	**ft_split(char const *str, char chr)
 	{
 		while (*str == chr)
 			str++;
-		w_len = 0;
-		while (*str != chr && *str != '\0')
+		if (ft_process_word(&str, chr, &words[num_words]) == 0)
 		{
-			w_len++;
-			str++;
+			ft_free_words(words);
+			return (NULL);
 		}
-		if (w_len > 0)
-		{
-			words[num_words] = ft_calloc(w_len + 1, sizeof(char));
-			if (!words[num_words])
-			{
-				ft_free_words(words);
-				return (NULL);
-			}
-			ft_strlcpy(words[num_words], str - w_len, w_len + 1);
-			num_words++;
-		}
+		num_words++;
 	}
 	words[num_words] = NULL;
 	return (words);
 }
+
+

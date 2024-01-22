@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:54:42 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/19 10:49:25 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/22 12:45:04 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,6 @@
 # include <stdlib.h>
 // # include <string.h>
 # include <unistd.h>
-
-/**
- * Se define unsigned long como size_t
- * 0 - 4,294,967,295 (2^32 - 1)
- */
-typedef unsigned long	size_t;
 
 typedef struct s_list
 {
@@ -224,7 +218,7 @@ void					*ft_calloc(size_t count, size_t len);
 /**
  * Reserva (con malloc(3)) y devuelve una substring de la string ’s’.
 
-	* La substring empieza desde el índice ’start’ y tiene una longitud máxima ’len’
+	* La substring empieza desde ’start’ y tiene una longitud máxima ’len’
  * @param str
  * @param start
  * @param len
