@@ -6,7 +6,7 @@
 #    By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/15 09:27:02 by serferna          #+#    #+#              #
-#    Updated: 2024/01/22 18:45:29 by serferna         ###   ########.fr        #
+#    Updated: 2024/01/22 18:48:09 by serferna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,6 +53,7 @@ SRC 		=	ft_isalpha.c \
 
 BONUSRC = ft_lstnew.c \
 					ft_lstadd_front.c \
+					ft_lstsize.c \
 
 
 

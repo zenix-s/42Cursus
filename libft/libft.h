@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:54:42 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/22 18:39:51 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/22 18:50:58 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -294,6 +294,13 @@ t_list					*ft_lstnew(void *content);
  * @param lst  dirección de un puntero al primer nodo de una lista.
  * @param new  un puntero al nodo que añadir al principio de la lista.
 */
-void ft_lstadd_front(t_list **lst, t_list *new);
+void					ft_lstadd_front(t_list **lst, t_list *new);
+
+/**
+ * Cuenta el número de nodos de una lista.
+ * @param lst  inicio de la lista.
+ * @return número de nodos.
+*/
+int						ft_lstsize(t_list *lst);
 
 #endif
