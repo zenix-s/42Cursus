@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 14:32:16 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/22 15:25:02 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/22 17:39:07 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,24 +46,44 @@ void	ft_free_words(char **words)
 	free(words);
 }
 
-int	ft_process_word(char const **str, char chr, char **word)
+int	ft_len(const char *str, char chr)
+{
+	int	len;
+
+	len = 0;
+	while (*str != chr && *str != '\0')
+	{
+		len++;
+		str++;
+	}
+	return (len);
+}
+
+char	**ft_process_words(const char *str, char chr, char **words,
+		int num_words)
 {
 	int	w_len;
 
-	w_len = 0;
-	while (**str != chr && **str != '\0')
+	while (*str)
 	{
-		w_len++;
-		(*str)++;
+		while (*str == chr)
+			str++;
+		w_len = ft_len(str, chr);
+		str += w_len;
+		if (w_len > 0)
+		{
+			words[num_words] = ft_calloc(w_len + 1, sizeof(char));
+			if (!words[num_words])
+			{
+				ft_free_words(words);
+				return (NULL);
+			}
+			ft_strlcpy(words[num_words], str - w_len, w_len + 1);
+			num_words++;
+		}
 	}
-	if (w_len > 0)
-	{
-		*word = ft_calloc(w_len + 1, sizeof(char));
-		if (!*word)
-			return (0);
-		ft_strlcpy(*word, *str - w_len, w_len + 1);
-	}
-	return (1);
+	words[num_words] = NULL;
+	return (words);
 }
 
 char	**ft_split(char const *str, char chr)
@@ -77,19 +97,5 @@ char	**ft_split(char const *str, char chr)
 	if (!words)
 		return (NULL);
 	num_words = 0;
-	while (*str)
-	{
-		while (*str == chr)
-			str++;
-		if (ft_process_word(&str, chr, &words[num_words]) == 0)
-		{
-			ft_free_words(words);
-			return (NULL);
-		}
-		num_words++;
-	}
-	words[num_words] = NULL;
-	return (words);
+	return (ft_process_words(str, chr, words, num_words));
 }
-
-
