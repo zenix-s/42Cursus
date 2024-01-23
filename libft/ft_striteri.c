@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 10:38:00 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/19 10:38:00 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/23 11:23:15 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@ void	ft_striteri(char *str, void (*f)(unsigned int, char *))
 	int	i;
 
 	i = -1;
-	if (str && f)
-		while (*(str + ++i))
-			f(i, str + i);
+	if (!str || !f)
+		return ;
+	while (*(str + ++i))
+		f(i, str + i);
 }

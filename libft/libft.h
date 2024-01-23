@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:54:42 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/23 09:44:14 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/23 11:22:29 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -264,8 +264,23 @@ char				**ft_split(char const *str, char chr);
  */
 char				*ft_itoa(int num);
 
+/**
+ * ft_strmapi
+ * Aplica la función ’f’ a cada caracter de la cadena ’str’
+ * para crear una nueva cadena (con malloc(3))
+ * que resulte de las aplicaciones sucesivas de ’f’.
+ * @param str Cadena sobre la que aplicar la función
+ * @param f Función a aplicar
+ * @return Cadena resultante
+*/
 char				*ft_strmapi(const char *str, char (*f)(unsigned int, char));
 
+/**
+ * ft_striteri
+ * Aplica la función ’f’ a cada caracter de la cadena ’str’
+ * @param str Cadena sobre la que aplicar la función
+ * @param f Función a aplicar
+*/
 void				ft_striteri(char *str, void (*f)(unsigned int, char *));
 
 void				ft_putchar_fd(char c, int fd);
