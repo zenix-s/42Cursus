@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 11:14:21 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/19 10:09:59 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/23 11:04:00 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strjoin(const char *s1, const char *s2)
 
 	len1 = ft_strlen(s1);
 	len2 = ft_strlen(s2);
-	str = (char *)malloc(sizeof(char) * (len1 + len2 + 1));
+	str = (char *)ft_calloc(len1 + len2 + 1, sizeof(char));
 	if (!str)
 		return (NULL);
 	i = 0;

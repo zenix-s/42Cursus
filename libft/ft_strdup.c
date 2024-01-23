@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 10:50:58 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/22 12:39:39 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/23 11:04:12 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strdup(const char *str)
 	int		i;
 
 	i = 0;
-	ptr = (char *)malloc(ft_strlen(str) + 1);
+	ptr = (char *)ft_calloc(ft_strlen(str) + 1, sizeof(char));
 	if (ptr == NULL)
 		return (NULL);
 	while (str[i] != '\0')
