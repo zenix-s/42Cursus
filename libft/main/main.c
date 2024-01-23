@@ -514,35 +514,161 @@ void ft_tolower_tester()
 
 void ft_strncmp_tester()
 {
-    printf("ft_strncmp_tester\n");
-
-    printf("ft_strncmp('','a',1) = %d %s\n", ft_strncmp("", "a", 1), ft_strncmp("", "a", 1) == -97 ? "✅" : "❌");
-    printf("ft_strncmp('a','a',1) = %d %s\n", ft_strncmp("a", "a", 1), ft_strncmp("a", "a", 1) == 0 ? "✅" : "❌");
-    printf("ft_strncmp('ab','a',1) = %d %s\n", ft_strncmp("ab", "ab", 1), ft_strncmp("ab", "ab", 1) == 0 ? "✅" : "❌");
-    printf("ft_strncmp('ab','b',1) = %d %s\n", ft_strncmp("ab", "bb", 1), ft_strncmp("ab", "bb", 1) == -1 ? "✅" : "❌");
-    printf("ft_strncmp('abc','a',2) = %d %s\n", ft_strncmp("abc", "a", 2), ft_strncmp("abc", "ab", 2) == 0 ? "✅" : "❌");
-    printf("ft_strncmp('abc','b',2) = %d %s\n", ft_strncmp("abc", "b", 2), ft_strncmp("abc", "b", 2) == -1 ? "✅" : "❌");
-    printf("ft_strncmp('abc','c',2) = %d %s\n", ft_strncmp("abc", "c", 2), ft_strncmp("abc", "c", 2) == -2 ? "✅" : "❌");
-    printf("ft_strncmp('abc','d',2) = %d %s\n", ft_strncmp("abc", "d", 2), ft_strncmp("abc", "d", 2) == -3 ? "✅" : "❌");
-    printf("ft_strncmp('abc',' ',2) = %d %s\n", ft_strncmp("abc", " ", 2), ft_strncmp("abc", " ", 2) == 65 ? "✅" : "❌");
-		printf("ft_strncmp('abc','!',2) = %d %s\n", ft_strncmp("abc", "!", 2), ft_strncmp("abc", "!", 2) == 64 ? "✅" : "❌");
+	printf("ft_strncmp_tester\n");
+	printf("ft_strncmp('abc', 'abc', 3) = %d %s\n", ft_strncmp("abc", "abc", 3), ft_strncmp("abc", "abc", 3) == 0 ? "✅" : "❌");
+	printf("ft_strncmp('abc', 'abd', 3) = %d %s\n", ft_strncmp("abc", "abd", 3), ft_strncmp("abc", "abd", 3) < 0 ? "✅" : "❌");
+	printf("ft_strncmp('abc', 'ab', 3) = %d %s\n", ft_strncmp("abc", "ab", 3), ft_strncmp("abc", "ab", 3) > 0 ? "✅" : "❌");
+	printf("ft_strncmp('abc', 'abcd', 3) = %d %s\n", ft_strncmp("abc", "abcd", 3), ft_strncmp("abc", "abcd", 3) == 0 ? "✅" : "❌");
+	printf("ft_strncmp('abc', 'abc', 2) = %d %s\n", ft_strncmp("abc", "abc", 2), ft_strncmp("abc", "abc", 2) == 0 ? "✅" : "❌");
+	printf("ft_strncmp('abc', 'abd', 2) = %d %s\n", ft_strncmp("abc", "abd", 2), ft_strncmp("abc", "abd", 2) == 0 ? "✅" : "❌");
+	printf("ft_strncmp('abc', 'ab', 2) = %d %s\n", ft_strncmp("abc", "ab", 2), ft_strncmp("abc", "ab", 2) == 0 ? "✅" : "❌");
+	printf("ft_strncmp('abc', 'abcd', 2) = %d %s\n", ft_strncmp("abc", "abcd", 2), ft_strncmp("abc", "abcd", 2) == 0 ? "✅" : "❌");
 }
 
-// void ft_strchr_tester()
-// {
-// 	printf("ft_strchr_tester\n");
-// 	printf("ft_strchr('','a') = %s %s\n",ft_strchr("","a") , ft_strchr("","a") == NULL ? "✅" : "❌");
-// 	printf("ft_strchr('a','a') = %s %s\n",ft_strchr("a","a") , ft_strchr("a","a") == "a" ? "✅" : "❌");
-// 	printf("ft_strchr('ab','a') = %s %s\n",ft_strchr("ab","a") , ft_strchr("ab","a") == "ab" ? "✅" : "❌");
-// 	printf("ft_strchr('ab','b') = %s %s\n",ft_strchr("ab","b") , ft_strchr("ab","b") == "b" ? "✅" : "❌");
-// 	printf("ft_strchr('abc','a') = %s %s\n",ft_strchr("abc","a") , ft_strchr("abc","a") == "abc" ? "✅" : "❌");
-// 	printf("ft_strchr('abc','b') = %s %s\n",ft_strchr("abc","b") , ft_strchr("abc","b") == "bc" ? "✅" : "❌");
-// 	printf("ft_strchr('abc','c') = %s %s\n",ft_strchr("abc","c") , ft_strchr("abc","c") == "c" ? "✅" : "❌");
-// 	printf("ft_strchr('abc','d') = %s %s\n",ft_strchr("abc","d") , ft_strchr("abc","d") == NULL ? "✅" : "❌");
-// 	printf("ft_strchr('abc',' ') = %s %s\n",ft_strchr("abc"," ") , ft_strchr("abc"," ") == NULL ? "✅" : "❌");
-// 	printf("ft_strchr('abc','!') = %s %s\n",ft_strchr("abc","!") , ft_strchr("abc","!") == NULL ? "✅" : "❌");
-// 	printf("ft_strchr('abc','[') = %s %s\n",ft_strchr("abc","[") , ft_strchr("abc","[") == NULL ? "✅" : "❌");
-// }
+
+void ft_strchr_tester()
+{
+	printf("ft_strchr_tester\n");
+	char *str = "Hola Mundo!";
+	printf("String: %s\n", str);
+	char *ptr = ft_strchr(str, 'o');
+	printf("Buscando 'o' en %s\n", str);
+	if (ptr != NULL)
+		printf("Caracter 'o' encontrado en la posicion %ld\n", ptr - str);
+	else
+		printf("Caracter 'o' no encontrado\n");
+	
+	ptr = ft_strchr(str, 'z');
+	printf("Buscando 'z' en %s\n", str);
+	if (ptr != NULL)
+		printf("Caracter 'z' encontrado en la posicion %ld\n", ptr - str);
+	else
+		printf("Caracter 'z' no encontrado\n");
+}
+
+void ft_strrchr_tester()
+{
+	printf("ft_strrchr_tester\n");
+	char *str = "Hola Mundo!";
+	printf("Cadena: %s\n", str);
+	char *ptr = ft_strrchr(str, 'o');
+	printf("Buscando 'o' en %s\n", str);
+	if (ptr != NULL)
+		printf("Caracter 'o' encontrado en la posicion %ld\n", ptr - str);
+	else
+		printf("Caracter 'o' no encontrado\n");
+	
+	ptr = ft_strrchr(str, 'z');
+	printf("Buscando 'z' en %s\n", str);
+	if (ptr != NULL)
+		printf("Caracter 'z' encontrado en la posicion %ld\n", ptr - str);
+	else
+		printf("Caracter 'z' no encontrado\n");
+}
+
+#include <stdio.h>
+#include <string.h>
+
+void ft_memset_tester()
+{
+	printf("ft_memset_tester\n");
+	
+	char str[20] = "Hola Mundo!";
+	printf("Antes memset: %s\n", str);
+	
+	memset(str, '*', 5);
+	printf("Después memset: %s\n", str);
+}
+
+void ft_bzero_tester()
+{
+	printf("ft_bzero_tester\n");
+	
+	char str[20] = "Hola Mundo!";
+	printf("Antes de ft_bzero: %s\n", str);
+	
+	ft_bzero(str, 5);
+	printf("Después de ft_bzero: %s\n", str); // No se imprime nada porque el primer caracter es nulo
+}
+
+void ft_memchr_tester()
+{
+	printf("ft_memchr_tester\n");
+	
+	char str[] = "texto español";
+	char *ptr = ft_memchr(str, 'a', strlen(str));
+	printf("Buscando 'a' en %s\n", str);
+	if (ptr != NULL)
+		printf("Caracter 'a' encontrado en la posición %ld\n", ptr - str);
+	else
+		printf("Caracter 'a' no encontrado\n");
+	
+	ptr = ft_memchr(str, 'z', strlen(str));
+	printf("Buscando 'z' en %s\n", str);
+	if (ptr != NULL)
+		printf("Caracter 'z' encontrado en la posición %ld\n", ptr - str);
+	else
+		printf("Caracter 'z' no encontrado\n");
+}
+
+void ft_memcpy_tester()
+{
+	printf("ft_memcpy_tester\n");
+	
+	char src[] = "Hola Mundo";
+	char dest[20];
+	
+	printf("Antes memcpy: %s\n", dest);
+	
+	ft_memcpy(dest, src, strlen(src) + 1);
+	
+	printf("Después memcpy: %s\n", dest);
+
+}
+
+void ft_memcmp_tester()
+{
+	printf("ft_memcmp_tester\n");
+	
+	char str1[] = "Hola Mundo!";
+	char str2[] = "texto en español";
+	char str3[] = "Hola Mundo!";
+	
+	int result = ft_memcmp(str1, str2, strlen(str1));
+	int result2 = ft_memcmp(str1, str3, strlen(str1));
+	
+	if (result == 0)
+		printf("Las cadenas son iguales\n");
+	else if (result < 0)
+		printf("La cadena 1 es menor que la cadena 2\n");
+	else
+		printf("La cadena 1 es mayor que la cadena 2\n");
+
+	if (result2 == 0)
+		printf("Las cadenas son iguales\n");
+	else if (result2 < 0)
+		printf("La cadena 1 es menor que la cadena 2\n");
+	else
+		printf("La cadena 1 es mayor que la cadena 2\n");
+
+
+}
+
+void ft_memmove_tester()
+{
+	printf("ft_memmove_tester\n");
+	
+	char str[] = "Hola Mundo!";
+	char dest[20];
+	
+	printf("Antes memmove: %s\n", dest);
+	
+	ft_memmove(dest, str, strlen(str) + 1);
+	
+	printf("Después memmove: %s\n", dest);
+}
+
+
 int main(void)
 {
 	ft_isalpha_tester();
@@ -562,6 +688,23 @@ int main(void)
 	ft_tolower_tester();
 	printf("\n");
 	ft_strncmp_tester();
+	printf("\n");
+	ft_strchr_tester();
+	printf("\n");
+	ft_strrchr_tester();
+	printf("\n");
+	ft_memset_tester();
+	printf("\n");
+	ft_bzero_tester();
+	printf("\n");	
+	ft_memchr_tester();
+	printf("\n");
+	ft_memcpy_tester();
+	printf("\n");
+	ft_memcmp_tester();
+	printf("\n");
+	ft_memmove_tester();
+	printf("\n");
 
 	return (0);
 
