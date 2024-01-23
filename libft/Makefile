@@ -6,7 +6,7 @@
 #    By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/15 09:27:02 by serferna          #+#    #+#              #
-#    Updated: 2024/01/22 18:45:44 by serferna         ###   ########.fr        #
+#    Updated: 2024/01/23 09:38:20 by serferna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,6 +57,9 @@ BONUSRC = ft_lstnew.c \
 					ft_lstlast.c \
 					ft_lstadd_back.c \
 					ft_lstdelone.c \
+					ft_lstclear.c \
+					ft_lstiter.c \
+					ft_lstmap.c \
 
 
 

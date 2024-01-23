@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:54:42 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/22 18:43:46 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/23 09:38:33 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -304,5 +304,12 @@ t_list				*ft_lstlast(t_list *lst);
 void				ft_lstadd_back(t_list **lst, t_list *new);
 
 void				ft_lstdelone(t_list *lst, void (*del)(void *));
+
+void				ft_lstclear(t_list **lst, void (*del)(void *));
+
+void				ft_lstiter(t_list *lst, void (*f)(void *));
+
+t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
+						void (*del)(void *));
 
 #endif
