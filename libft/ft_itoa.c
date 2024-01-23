@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 10:53:21 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/17 10:53:30 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/23 11:14:07 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char	*ft_itoa(int num)
 
 	sign = 1;
 	len = ft_numlen(num);
-	str = ft_calloc(len + 1, sizeof(char));
+	str = (char *)ft_calloc(len + 1, sizeof(char));
 	if (!str)
 		return (0);
 	if (num < 0)

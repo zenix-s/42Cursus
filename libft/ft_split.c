@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 14:32:16 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/22 17:39:07 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/23 11:15:12 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ char	**ft_process_words(const char *str, char chr, char **words,
 		str += w_len;
 		if (w_len > 0)
 		{
-			words[num_words] = ft_calloc(w_len + 1, sizeof(char));
+			words[num_words] = (char *)ft_calloc(w_len + 1, sizeof(char));
 			if (!words[num_words])
 			{
 				ft_free_words(words);
@@ -93,7 +93,7 @@ char	**ft_split(char const *str, char chr)
 
 	if (!str)
 		return (0);
-	words = ft_calloc(ft_count_words(str, chr) + 1, sizeof(char *));
+	words = (char **)ft_calloc(ft_count_words(str, chr) + 1, sizeof(char *));
 	if (!words)
 		return (NULL);
 	num_words = 0;

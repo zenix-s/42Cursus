@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 18:31:29 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/18 10:56:26 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/23 11:17:22 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strmapi(const char *str, char (*f)(unsigned int, char))
 	int		len;
 
 	len = ft_strlen(str);
-	new_str = ft_calloc(len + 1, sizeof(char));
+	new_str = (char *)ft_calloc(len + 1, sizeof(char));
 	if (!new_str)
 		return (0);
 	i = 0;
