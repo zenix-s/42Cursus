@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:21:12 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/19 10:09:59 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/23 12:07:07 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ int	ft_strncmp(const char *str1, const char *str2, size_t len)
 		len--;
 	}
 	if (len == 0)
-	{
 		return (0);
-	}
 	return (*(unsigned char *)str1 - *(unsigned char *)str2);
 }

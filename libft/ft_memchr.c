@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 11:02:14 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/15 11:02:58 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/23 11:40:14 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 void	*ft_memchr(const void *ptr, int chr, size_t len)
 {
-	unsigned char	*p;
+	unsigned char	*act_byte;
 
-	p = (unsigned char *)ptr;
+	act_byte = (unsigned char *)ptr;
 	while (len--)
 	{
-		if (*p == (unsigned char)chr)
-			return ((void *)p);
-		p++;
+		if (*act_byte == (unsigned char)chr)
+			return ((void *)act_byte);
+		act_byte++;
 	}
 	return (NULL);
 }

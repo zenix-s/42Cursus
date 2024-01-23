@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 12:54:42 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/23 11:22:29 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/23 11:53:27 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -283,13 +283,13 @@ char				*ft_strmapi(const char *str, char (*f)(unsigned int, char));
 */
 void				ft_striteri(char *str, void (*f)(unsigned int, char *));
 
-void				ft_putchar_fd(char c, int fd);
+void				ft_putchar_fd(char chr, int fd);
 
-void				ft_putstr_fd(char *s, int fd);
+void				ft_putstr_fd(char *str, int fd);
 
-void				ft_putendl_fd(char *s, int fd);
+void				ft_putendl_fd(char *str, int fd);
 
-void				ft_putnbr_fd(int n, int fd);
+void				ft_putnbr_fd(int num, int fd);
 
 /**
  * Crea un nuevo nodo utilizando malloc(3).
