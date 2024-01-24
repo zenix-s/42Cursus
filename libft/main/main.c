@@ -912,11 +912,11 @@ char ft_modify_char_r(unsigned int index, char c)
 {
 	if (index % 2 == 0)
 	{
-		c = toupper(c);
+		c = ft_toupper(c);
 	}
 	else
 	{
-		c = tolower(c);
+		c = ft_tolower(c);
 	}
 
 	return (c);
@@ -928,7 +928,7 @@ void ft_strmapi_tester()
 	
 	char str[] = "Hola mundo";
 	
-	char* ptr = ft_strmapi(str, &ft_toupper);
+	char* ptr = ft_strmapi(str, &ft_modify_char_r);
 	
 	if (ptr != NULL)
 	{
@@ -947,11 +947,11 @@ void ft_modify_char(unsigned int index, char *c)
 {
 	if (index % 2 == 0)
 	{
-		*c = toupper(*c);
+		*c = ft_toupper(*c);
 	}
 	else
 	{
-		*c = tolower(*c);
+		*c = ft_tolower(*c);
 	}
 }
 
@@ -1006,20 +1006,42 @@ void ft_lstnew_tester()
 {
 	printf("ft_lstnew_tester\n");
 	
-	t_list* list = ft_lstnew("Hola mundo");
+	t_list *list = ft_lstnew("Hola mundo");
 
 	
 	if (list != NULL)
 	{
 		printf("String: %s\n", list->content);
 		
-		free(list->content);
 		free(list);
 	}
 	else
 	{
 		printf("Fallo en la asignación de memoria\n");
 	}
+}
+
+void ft_lstadd_front_tester()
+{
+
+	printf("ft_lstadd_front_tester\n");
+
+	t_list *list;
+	t_list *nodo1 = ft_lstnew("Hola mundo");
+	t_list *new_node = ft_lstnew("Hola 42 madrid");
+	t_list *nodo3 = ft_lstnew("hola sergio");
+
+	ft_lstadd_front(&list, nodo1);
+
+	printf("primer añadido");
+	while (list != NULL)
+	{
+		printf("%s --> ", list->content);
+		if(list->next == NULL)
+			printf(" NULL");
+		list = list->next;
+	}
+
 }
 
 
@@ -1094,6 +1116,10 @@ int main(void)
 	printf("\n");
 	ft_putnbr_fd_tester();
 	printf("\n");
+	printf("\n");
+	ft_lstnew_tester();
+	printf("\n");
+	ft_lstadd_front_tester();
 
 
 
