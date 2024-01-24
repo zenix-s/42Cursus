@@ -1077,6 +1077,46 @@ void ft_lstsize_tester()
 	
 }
 
+void ft_lstlast_tester()
+{
+	t_list *list;
+	t_list *nodo1 = ft_lstnew("Hola mundo");
+	t_list *new_node = ft_lstnew("Hola 42 madrid");
+	t_list *nodo3 = ft_lstnew("hola sergio");
+
+	list = nodo1;
+	ft_lstadd_front(&list, new_node);
+	ft_lstadd_front(&list, nodo3);
+
+	printf("ft_lstlast_tester\n");
+
+	printf("ultimo = %s\n", ft_lstlast(list)->content);
+	
+}
+
+void ft_lstadd_back_tester()
+{
+	t_list *list;
+	t_list *nodo1 = ft_lstnew("Hola mundo");
+	t_list *new_node = ft_lstnew("Hola 42 madrid");
+	t_list *nodo3 = ft_lstnew("hola sergio");
+
+	list = nodo1;
+	ft_lstadd_front(&list, new_node);
+	ft_lstadd_front(&list, nodo3);
+
+	printf("ft_lstadd_back_tester\n");
+
+	ft_lstadd_back(&list, ft_lstnew("adios sergio"));
+
+	while (list != NULL)
+	{
+		printf("%s --> ", list->content);
+		if(list->next == NULL)
+			printf(" NULL");
+		list = list->next;
+	}
+}
 
 int main(void)
 {
