@@ -908,13 +908,25 @@ void ft_itoa_tester()
 	}
 }
 
+void ft_modify_char(unsigned int index, char *c)
+{
+	if (index % 2 == 0)
+	{
+		*c = toupper(*c);
+	}
+	else
+	{
+		*c = tolower(*c);
+	}
+}
+
 void ft_strmapi_tester()
 {
 	printf("ft_strmapi_tester\n");
 	
 	char str[] = "Hola mundo";
 	
-	char* ptr = ft_strmapi(str, &ft_toupper);
+	char* ptr = ft_strmapi(str, &ft_modify_char);
 	
 	if (ptr != NULL)
 	{
@@ -929,17 +941,7 @@ void ft_strmapi_tester()
 	}
 }
 
-void ft_modify_char(unsigned int index, char *c)
-{
-	if (index % 2 == 0)
-	{
-		*c = toupper(*c);
-	}
-	else
-	{
-		*c = tolower(*c);
-	}
-}
+
 
 void ft_striteri_tester()
 {
@@ -1061,7 +1063,7 @@ int main(void)
 	printf("\n");
 	ft_putnbr_fd_tester();
 	printf("\n");
-	
+
 
 
 	return (0);
