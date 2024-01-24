@@ -668,6 +668,328 @@ void ft_memmove_tester()
 	printf("Después memmove: %s\n", dest);
 }
 
+void ft_strlcpy_tester()
+{
+	printf("ft_strlcpy_tester\n");
+	
+	char src[] = "texto en español";
+	char dest[20];
+	
+	printf("Antes strlcpy: %s\n", dest);
+	
+	size_t len = ft_strlcpy(dest, src, sizeof(dest));
+	
+	printf("Después strlcpy: %s\n", dest);
+	printf("Longitud copiada: %zu\n", len);
+}
+
+void ft_strnstr_tester()
+{
+	printf("ft_strnstr_tester\n");
+	
+	char str[] = "Hola mundo";
+	char search[] = "mundo";
+	
+	char *result = ft_strnstr(str, search, strlen(str));
+	
+	if (result != NULL)
+		printf("Texto encontrado en indice: %ld\n", result - str);
+	else
+		printf("Texto no encontrado\n");
+}
+
+void ft_strlcat_tester()
+{
+	printf("ft_strlcat_tester\n");
+	
+	char src[] = "Hola mundo";
+	char dest[20] = "Hello, ";
+	
+	printf("Antes de strlcat: %s\n", dest);
+	
+	size_t len = ft_strlcat(dest, src, sizeof(dest));
+	
+	printf("Después de strlcat: %s\n", dest);
+	printf("Longitud de la cadena concatenada: %zu\n", len);
+}
+
+void ft_atoi_tester()
+{
+	printf("ft_atoi_tester\n");
+	
+	char str1[] = "42";
+	char str2[] = "-123";
+	char str3[] = "0";
+	char str4[] = "abc";
+	
+	int num1 = ft_atoi(str1);
+	int num2 = ft_atoi(str2);
+	int num3 = ft_atoi(str3);
+	int num4 = ft_atoi(str4);
+	
+	printf("String: %s, Integer: %d\n", str1, num1);
+	printf("String: %s, Integer: %d\n", str2, num2);
+	printf("String: %s, Integer: %d\n", str3, num3);
+	printf("String: %s, Integer: %d\n", str4, num4);
+}
+
+void ft_calloc_tester()
+{
+	printf("ft_calloc_tester\n");
+	
+	size_t num_elements = 5;
+	size_t element_size = sizeof(int);
+	
+	int* ptr = ft_calloc(num_elements, element_size);
+	
+	if (ptr != NULL)
+	{
+		printf("Memoria asignada correctamente\n");
+		
+		// Establecer valores en la memoria asignada
+		for (size_t i = 0; i < num_elements; i++)
+		{
+			ptr[i] = i + 1;
+		}
+		
+		// Imprimir los valores
+		printf("Valores de la memoria asignada: ");
+		for (size_t i = 0; i < num_elements; i++)
+		{
+			printf("%d ", ptr[i]);
+		}
+		printf("\n");
+		
+		// Liberar la memoria asignada
+		free(ptr);
+	}
+	else
+	{
+		printf("Fallo en la asignación de memoria\n");
+	}
+}
+
+void ft_strdup_tester()
+{
+	printf("ft_strdup_tester\n");
+	
+	char str[] = "Hola mundo";
+	
+	char* ptr = ft_strdup(str);
+	
+	if (ptr != NULL)
+	{
+		printf("String original: %s\n", str);
+		printf("String duplicado: %s\n", ptr);
+		
+		free(ptr);
+	}
+	else
+	{
+		printf("Fallo en la asignación de memoria\n");
+	}
+}
+
+void ft_substr_tester()
+{
+	printf("ft_substr_tester\n");
+	
+	char str[] = "Hola mundo";
+	
+	char* ptr = ft_substr(str, 5, 5);
+	
+	if (ptr != NULL)
+	{
+		printf("String original: %s\n", str);
+		printf("String substraido: %s\n", ptr);
+		
+		free(ptr);
+	}
+	else
+	{
+		printf("Fallo en la asignación de memoria\n");
+	}
+}
+
+void ft_strjoin_tester()
+{
+	printf("ft_strjoin_tester\n");
+	
+	char str1[] = "Hola ";
+	char str2[] = "mundo";
+	
+	char* ptr = ft_strjoin(str1, str2);
+	
+	if (ptr != NULL)
+	{
+		printf("String 1: %s\n", str1);
+		printf("String 2: %s\n", str2);
+		printf("String concatenado: %s\n", ptr);
+		
+		free(ptr);
+	}
+	else
+	{
+		printf("Fallo en la asignación de memoria\n");
+	}
+}
+
+void ft_strtrim_tester()
+{
+	printf("ft_strtrim_tester\n");
+	
+	char str[] = "   Hola mundo   ";
+	char set[] = " ";
+	
+	char* ptr = ft_strtrim(str, set);
+	
+	if (ptr != NULL)
+	{
+		printf("String original: %s\n", str);
+		printf("String trim: %s\n", ptr);
+		
+		free(ptr);
+	}
+	else
+	{
+		printf("Fallo en la asignación de memoria\n");
+	}
+}
+
+void ft_split_tester()
+{
+	printf("ft_split_tester\n");
+	
+	char str[] = "Hola mundo";
+	char delim = ' ';
+	
+	char** ptr = ft_split(str, delim);
+	
+	if (ptr != NULL)
+	{
+		printf("String original: %s\n", str);
+		printf("String separado: %s, %s\n", ptr[0], ptr[1]);
+		
+		free(ptr[0]);
+		free(ptr[1]);
+		free(ptr);
+	}
+	else
+	{
+		printf("Fallo en la asignación de memoria\n");
+	}
+}
+
+void ft_itoa_tester()
+{
+	printf("ft_itoa_tester\n");
+	
+	int num1 = 123;
+	int num2 = -123;
+	int num3 = 0;
+	
+	char* ptr1 = ft_itoa(num1);
+	char* ptr2 = ft_itoa(num2);
+	char* ptr3 = ft_itoa(num3);
+	
+	if (ptr1 != NULL && ptr2 != NULL && ptr3 != NULL)
+	{
+		printf("Integer: %d, String: %s\n", num1, ptr1);
+		printf("Integer: %d, String: %s\n", num2, ptr2);
+		printf("Integer: %d, String: %s\n", num3, ptr3);
+		
+		free(ptr1);
+		free(ptr2);
+		free(ptr3);
+	}
+	else
+	{
+		printf("Fallo en la asignación de memoria\n");
+	}
+}
+
+void ft_strmapi_tester()
+{
+	printf("ft_strmapi_tester\n");
+	
+	char str[] = "Hola mundo";
+	
+	char* ptr = ft_strmapi(str, &ft_toupper);
+	
+	if (ptr != NULL)
+	{
+		printf("String original: %s\n", str);
+		printf("String modificado: %s\n", ptr);
+		
+		free(ptr);
+	}
+	else
+	{
+		printf("Fallo en la asignación de memoria\n");
+	}
+}
+
+void ft_modify_char(unsigned int index, char *c)
+{
+	if (index % 2 == 0)
+	{
+		*c = toupper(*c);
+	}
+	else
+	{
+		*c = tolower(*c);
+	}
+}
+
+void ft_striteri_tester()
+{
+	printf("ft_striteri_tester\n");
+	
+	char str[] = "Hello, World!";
+	
+	ft_striteri(str, &ft_modify_char);
+	
+	printf("Modified string: %s\n", str);
+}
+
+void ft_putchar_fd_tester()
+{
+	printf("ft_putchar_fd_tester\n");
+	
+	char c = 'a';
+	
+	ft_putchar_fd(c, 1);
+}
+
+void ft_putstr_fd_tester()
+{
+	printf("ft_putstr_fd_tester\n");
+	
+	char str[] = "Hello, World!";
+	
+	ft_putstr_fd(str, 1);
+}
+
+void ft_putendl_fd_tester()
+{
+	printf("ft_putendl_fd_tester\n");
+	
+	char str[] = "Hello, World!";
+	
+	ft_putendl_fd(str, 1);
+}
+
+void ft_putnbr_fd_tester()
+{
+	printf("ft_putnbr_fd_tester\n");
+	
+	int num = 123;
+	
+	ft_putnbr_fd(num, 1);
+}
+
+
+
 
 int main(void)
 {
@@ -705,6 +1027,42 @@ int main(void)
 	printf("\n");
 	ft_memmove_tester();
 	printf("\n");
+	ft_strlcpy_tester();
+	printf("\n");
+	ft_strnstr_tester();
+	printf("\n");
+	ft_strlcat_tester();
+	printf("\n");
+	ft_atoi_tester();
+	printf("\n");
+	ft_calloc_tester();
+	printf("\n");
+	ft_strdup_tester();
+	printf("\n");
+	ft_substr_tester();
+	printf("\n");
+	ft_strjoin_tester();
+	printf("\n");
+	ft_strtrim_tester();
+	printf("\n");
+	ft_split_tester();
+	printf("\n");	
+	ft_itoa_tester();
+	printf("\n");
+	ft_strmapi_tester();
+	printf("\n");
+	ft_striteri_tester();
+	printf("\n");
+	ft_putchar_fd_tester();
+	printf("\n");
+	ft_putstr_fd_tester();
+	printf("\n");
+	ft_putendl_fd_tester();
+	printf("\n");
+	ft_putnbr_fd_tester();
+	printf("\n");
+	
+
 
 	return (0);
 
