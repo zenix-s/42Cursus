@@ -1118,9 +1118,15 @@ void ft_lstadd_back_tester()
 	}
 }
 
+void ft_del(void *content)
+{
+	content = NULL;
+}
+
 void ft_lstdelone_tester()
 {
 	t_list *list;
+	t_list *tmp;
 	t_list *nodo1 = ft_lstnew("Hola mundo");
 	t_list *new_node = ft_lstnew("Hola 42 madrid");
 	t_list *nodo3 = ft_lstnew("hola sergio");
@@ -1129,21 +1135,31 @@ void ft_lstdelone_tester()
 	ft_lstadd_front(&list, new_node);
 	ft_lstadd_front(&list, nodo3);
 
-	printf("ft_lstdelone_tester\n");
-
-
-	ft_lstdelone(list->next->next, &free);
-
+	printf("Antes de la eliminación:\n");
+	tmp = list;
 	while (list != NULL)
 	{
 		printf("%s --> ", list->content);
-		if(list->next == NULL)
+		if (list->next == NULL)
 			printf(" NULL");
 		list = list->next;
 	}
 
-	
+	// Eliminando el tercer nodo
+	ft_lstdelone(tmp->next->next, &ft_del);
+	// tmp->next = NULL;
+
+
+	printf("\nDespués de la eliminación:\n");
+	while (tmp != NULL)
+	{
+		printf("%s --> ", tmp->content);
+		if (tmp->next == NULL)
+			printf(" NULL");
+		tmp = tmp->next;
+	}
 }
+
 
 int main(void)
 {
@@ -1225,6 +1241,9 @@ int main(void)
 	ft_lstlast_tester();
 	printf("\n");
 	ft_lstadd_back_tester();
+	printf("\n");
+	ft_lstdelone_tester();
+	printf("\n");
 
 
 
