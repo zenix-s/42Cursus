@@ -1033,7 +1033,8 @@ void ft_lstadd_front_tester()
 
 	list = nodo1;
 
-	printf("primer añadido");
+	printf("primer añadido\n");
+
 	while (list != NULL)
 	{
 		printf("%s --> ", list->content);
@@ -1048,7 +1049,7 @@ void ft_lstadd_front_tester()
 	ft_lstadd_front(&nodo1, new_node);
 	ft_lstadd_front(&nodo1, nodo3);
 
-	printf("segundo añadido");
+	printf("segundo añadido\n");
 	while (list != NULL)
 	{
 		printf("%s --> ", list->content);
