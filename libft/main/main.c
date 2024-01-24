@@ -1002,6 +1002,25 @@ void ft_putnbr_fd_tester()
 	ft_putnbr_fd(num, 1);
 }
 
+void ft_lstnew_tester()
+{
+	printf("ft_lstnew_tester\n");
+	
+	t_list* list = ft_lstnew("Hola mundo");
+
+	
+	if (list != NULL)
+	{
+		printf("String: %s\n", list->content);
+		
+		free(list->content);
+		free(list);
+	}
+	else
+	{
+		printf("Fallo en la asignación de memoria\n");
+	}
+}
 
 
 
