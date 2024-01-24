@@ -1060,6 +1060,22 @@ void ft_lstadd_front_tester()
 
 }
 
+void ft_lstsize_tester()
+{
+	t_list *list;
+	t_list *nodo1 = ft_lstnew("Hola mundo");
+	t_list *new_node = ft_lstnew("Hola 42 madrid");
+	t_list *nodo3 = ft_lstnew("hola sergio");
+
+	list = nodo1;
+	ft_lstadd_front(&nodo1, new_node);
+	ft_lstadd_front(&nodo1, nodo3);
+
+	printf("ft_lstsize_tester\n");
+
+	printf("size = %d\n", ft_lstsize(list));
+	
+}
 
 
 int main(void)
