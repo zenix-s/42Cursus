@@ -1068,8 +1068,8 @@ void ft_lstsize_tester()
 	t_list *nodo3 = ft_lstnew("hola sergio");
 
 	list = nodo1;
-	ft_lstadd_front(&nodo1, new_node);
-	ft_lstadd_front(&nodo1, nodo3);
+	ft_lstadd_front(&list, new_node);
+	ft_lstadd_front(&list, nodo3);
 
 	printf("ft_lstsize_tester\n");
 
@@ -1152,6 +1152,10 @@ int main(void)
 	ft_lstnew_tester();
 	printf("\n");
 	ft_lstadd_front_tester();
+	printf("\n");
+	ft_lstsize_tester();
+	printf("\n");
+
 
 
 
