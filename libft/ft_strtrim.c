@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 11:13:43 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/17 10:29:45 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/26 10:55:41 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strtrim(const char *str, const char *set)
 	int		start;
 	int		end;
 
+	if (!str || !set)
+		return (NULL);
 	len = ft_strlen(str);
 	start = 0;
 	end = len - 1;

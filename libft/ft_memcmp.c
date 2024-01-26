@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 11:03:39 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/23 11:43:24 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/26 10:35:12 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ int	ft_memcmp(const void *str1, const void *str2, size_t len)
 	const unsigned char	*act_byte1;
 	const unsigned char	*act_byte2;
 
+	if (!str1 && !str2)
+		return (0);
 	act_byte1 = (const unsigned char *)str1;
 	act_byte2 = (const unsigned char *)str2;
 	while (len--)

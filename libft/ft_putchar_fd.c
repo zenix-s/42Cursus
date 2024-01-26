@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 13:50:27 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/23 11:51:14 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/26 10:36:35 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 void	ft_putchar_fd(char chr, int fd)
 {
+	if (!fd)
+		return ;
 	write(fd, &chr, 1);
 }

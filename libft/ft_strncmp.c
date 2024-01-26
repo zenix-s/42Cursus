@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 14:21:12 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/23 12:07:07 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/26 10:55:13 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 int	ft_strncmp(const char *str1, const char *str2, size_t len)
 {
+	if (!str1 && !str2)
+		return (0);
 	while (len > 0 && *str1 && (*str1 == *str2))
 	{
 		str1++;
