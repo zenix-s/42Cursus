@@ -15,7 +15,7 @@
 char	*ft_strjoin(const char *s1, const char *s2)
 {
 	char	*str;
-  char	*start_str;
+	char	*start_str;
 
 	if (!s1 || !s2)
 		return (NULL);
@@ -24,9 +24,9 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	if (!str)
 		return (NULL);
 	while (*s1)
-    *str++ = *s1++;
+		*str++ = *s1++;
 	while (*s2)
-    *str++ = *s2++;
+		*str++ = *s2++;
 	*str = '\0';
 	return (start_str);
 }
