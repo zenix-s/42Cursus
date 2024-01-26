@@ -15,29 +15,18 @@
 char	*ft_strjoin(const char *s1, const char *s2)
 {
 	char	*str;
-	size_t	len1;
-	size_t	len2;
-	size_t	i;
+  char	*start_str;
 
 	if (!s1 || !s2)
 		return (NULL);
-	len1 = ft_strlen(s1);
-	len2 = ft_strlen(s2);
-	str = (char *)ft_calloc(len1 + len2 + 1, sizeof(char));
+	str = (char *)ft_calloc(ft_strlen(s1) + ft_strlen(s2) + 1, sizeof(char));
+	start_str = str;
 	if (!str)
 		return (NULL);
-	i = 0;
-	while (i < len1)
-	{
-		str[i] = s1[i];
-		i++;
-	}
-	i = 0;
-	while (i < len2)
-	{
-		str[i + len1] = s2[i];
-		i++;
-	}
-	str[len1 + len2] = '\0';
-	return (str);
+	while (*s1)
+    *str++ = *s1++;
+	while (*s2)
+    *str++ = *s2++;
+	*str = '\0';
+	return (start_str);
 }
