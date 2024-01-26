@@ -6,7 +6,7 @@
 #    By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/15 09:27:02 by serferna          #+#    #+#              #
-#    Updated: 2024/01/23 09:43:37 by serferna         ###   ########.fr        #
+#    Updated: 2024/01/26 09:55:21 by serferna         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,15 +51,15 @@ SRC 		=	ft_isalpha.c \
 				ft_putendl_fd.c \
 				ft_putnbr_fd.c \
 
-BONUSRC = ft_lstnew.c \
-					ft_lstadd_front.c \
-					ft_lstsize.c \
-					ft_lstlast.c \
-					ft_lstadd_back.c \
-					ft_lstdelone.c \
-					ft_lstclear.c \
-					ft_lstiter.c \
-					ft_lstmap.c \
+BONUSRC = ft_lstnew_bonus.c \
+					ft_lstadd_front_bonus.c \
+					ft_lstsize_bonus.c \
+					ft_lstlast_bonus.c \
+					ft_lstadd_back_bonus.c \
+					ft_lstdelone_bonus.c \
+					ft_lstclear_bonus.c \
+					ft_lstiter_bonus.c \
+					ft_lstmap_bonus.c \
 
 
 
