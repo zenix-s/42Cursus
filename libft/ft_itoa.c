@@ -6,13 +6,13 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 10:53:21 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/23 11:14:07 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/29 10:30:12 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_numlen(int num)
+static int	ft_numlen(int num)
 {
 	int	len;
 

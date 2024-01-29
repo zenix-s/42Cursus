@@ -755,18 +755,40 @@ void ft_del(void *content)
 
 void ft_lstdelone_tester()
 {
-	t_list *nodo1 = ft_lstnew("Hola mundo");
-
-
-
 	printf("ft_lstdelone_tester\n");
+	t_list *tmp_list;
+	t_list *nodo1 = ft_lstnew("Hola mundo");
+	t_list *new_node = ft_lstnew("Hola 42 madrid");
+	t_list *nodo3 = ft_lstnew("hola sergio");
 
-	ft_lstdelone(nodo1, &ft_del);
+	ft_lstadd_back(&nodo1, new_node);
+	ft_lstadd_back(&nodo1, nodo3);
 
-	if(nodo1)
-		printf("nodo1 = NULL\n");
-	else
-		printf("nodo1 != NULL\n");
+
+	tmp_list = nodo1;
+	printf("pre delete\n");
+	while (tmp_list != NULL)
+	{
+		printf("%s --> ", tmp_list->content);
+		if(tmp_list->next == NULL)
+			printf(" NULL");
+		tmp_list = tmp_list->next;
+	}
+
+	printf("\n");
+	ft_lstdelone(nodo3, &ft_del);
+
+	tmp_list = nodo1;
+	printf("post delete\n");
+	while (tmp_list != NULL)
+	{
+		printf("hola\n");
+		printf("%s --> ", tmp_list->content);
+		if(tmp_list->next == NULL)
+			printf(" NULL");
+		tmp_list = tmp_list->next;
+	}
+
 }
 
 void ft_lstclear_tester()
