@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 11:13:09 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/29 14:12:36 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/29 14:17:13 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_calloc(size_t count, size_t len)
 {
 	void	*ptr;
 
-	if (count && len && count > (UINT_MAX / len))
+	if (count && len && count > (SIZE_MAX / len))
 		return (NULL);
 	ptr = malloc(count * len);
 	if (ptr == 0)
