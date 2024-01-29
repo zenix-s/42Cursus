@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 14:01:41 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/26 10:36:43 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/29 13:58:59 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ void	ft_putnbr_fd(int num, int fd)
 {
 	long int	num_act_val;
 
-	if (!fd)
-		return ;
 	num_act_val = num;
 	if (num_act_val < 0)
 	{
