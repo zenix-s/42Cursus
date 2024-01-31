@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 13:50:14 by serferna          #+#    #+#             */
-/*   Updated: 2024/01/29 13:59:11 by serferna         ###   ########.fr       */
+/*   Updated: 2024/01/31 19:15:02 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,8 @@
 
 void	ft_putstr_fd(char *str, int fd)
 {
-	int	i;
+	int	len;
 
-	if (!str)
-		return ;
-	i = 0;
-	while (str[i])
-	{
-		ft_putchar_fd(str[i++], fd);
-	}
+	len = ft_strlen(str);
+	write(fd, str, len);
 }

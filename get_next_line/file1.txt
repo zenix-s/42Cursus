@@ -1,6 +1,6 @@
-Esta es la linea 1
-Esta es la linea 2
-Esta es la linea 3
-Esta es la linea 4
-Esta es la linea 5
-Esta es la linea 6
+Esta es la linea 1 del fichero 1
+Esta es la linea 2 del fichero 1
+Esta es la linea 3 del fichero 1
+Esta es la linea 4 del fichero 1
+Esta es la linea 5 del fichero 1
+Esta es la linea 6 del fichero 1
