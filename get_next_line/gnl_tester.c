@@ -4,7 +4,6 @@ int main()
 {
 
 	int fd;
-	int fd2;
 	char *line;
 
 	fd = open("file1.txt", O_RDONLY);
@@ -18,7 +17,6 @@ int main()
 
 
 	close(fd);
-	close(fd2);
 	return (0);
 
 }
