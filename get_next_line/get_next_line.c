@@ -6,64 +6,70 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 13:08:09 by serferna          #+#    #+#             */
-/*   Updated: 2024/02/02 10:16:26 by serferna         ###   ########.fr       */
+/*   Updated: 2024/03/19 12:45:29 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char *get_next_line(int fd)
+char *get_line(char **str)
 {
-	static char *str[1024];
-	char *buffer;
-	char *aux;
+	char *line;
+	char *temp;
 	int i;
 
-	i = read(fd, NULL, 0);
+	i = 0;
+	while ((*str)[i] != '\n' && (*str)[i] != '\0')
+		i++;
+	if ((*str)[i] == '\n')
+	{
+		line = ft_substr(*str, 0, i + 1);
+		temp = ft_strdup(&((*str)[i + 1]));
+		free(*str);
+		*str = temp;
+		if ((*str)[0] == '\0')
+		{
+			free(*str);
+			*str = NULL;
+		}
+	}
+	else
+	{
+		line = ft_strdup(*str);
+		free(*str);
+		*str = NULL;
+	}
+	return (line);
+}
 
-	if (i < 0 || BUFFER_SIZE <= 0 || fd < 0)
-		return (NULL);
-	if (!str[fd])
-		str[fd] = ft_strdup("");
-	if (!str[fd])
+char *get_next_line(int fd)
+{
+	static char *str;
+	char *buffer;
+	char *temp;
+	int bytes_read;
+
+	if (BUFFER_SIZE <= 0 || fd < 0 || fd > 1024)
 		return (NULL);
 
-	buffer = ft_calloc(BUFFER_SIZE + 1, sizeof(char));
+	buffer = malloc(BUFFER_SIZE + 1);
 	if (!buffer)
-	{
-		free(str[fd]);
 		return (NULL);
-	}
-
-	i = 1;
-
-	while (i)
+	bytes_read = read(fd, buffer, BUFFER_SIZE);
+	while (bytes_read > 0)
 	{
-		i = read(fd, buffer, BUFFER_SIZE);
-		if (i < 0)
-		{
-			free(buffer);
-			free(str[fd]);
-			return (NULL);
-		}
-
-		buffer[i] = '\0';
-		aux = ft_strjoin(str[fd], buffer);
-
-		if (ft_strchr(aux, '\n'))
-		{
-			free(buffer);
-			free(str[fd]);
-			str[fd] = ft_strdup(ft_strchr(aux, '\n') + 1);
-			return (ft_substr(aux, 0, ft_strchr(aux, '\n') - aux));
-		}
-		else
-		{
-			free(str[fd]);
-			str[fd] = ft_strdup(aux);
-		}
-		free(buffer);
-		free(aux);
+		buffer[bytes_read] = '\0';
+		if (!str)
+			str = ft_strdup("");
+		temp = ft_strjoin(str, buffer);
+		free(str);
+		str = temp;
+		if (ft_strchr(str, '\n'))
+			break;
+		bytes_read = read(fd, buffer, BUFFER_SIZE);
 	}
-	return (NULL);
+	free(buffer);
+	if (bytes_read < 0)
+		return (NULL);
+	return (get_line(&str));
 }
