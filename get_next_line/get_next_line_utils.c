@@ -1,22 +1,14 @@
 #include "get_next_line.h"
 
-void	*ft_memset(void *ptr, int chr, size_t len)
-{
-	unsigned char	*act_byte;
-	unsigned char	value;
-
-	act_byte = ptr;
-	value = (unsigned char)chr;
-	while (len--)
-	{
-		*act_byte++ = value;
-	}
-	return (ptr);
-}
-
 void	ft_bzero(void *ptr, size_t len)
 {
-	ft_memset(ptr, 0, len);
+	unsigned char	*act_byte;
+
+	act_byte = ptr;
+	while (len--)
+	{
+		*act_byte++ = 0;
+	}
 }
 
 void	*ft_calloc(size_t count, size_t len)
@@ -26,7 +18,7 @@ void	*ft_calloc(size_t count, size_t len)
 	if (count && len && count > (SIZE_MAX / len))
 		return (NULL);
 	ptr = malloc(count * len);
-	if (ptr == 0)
+	if (!ptr)
 		return (NULL);
 	ft_bzero(ptr, count * len);
 	return (ptr);
@@ -35,6 +27,9 @@ void	*ft_calloc(size_t count, size_t len)
 size_t	ft_strlen(const char *str)
 {
 	size_t	i;
+
+	if (!str)
+		return (0);
 
 	i = 0;
 	while (str[i])
@@ -49,7 +44,7 @@ char	*ft_strdup(const char *str)
 
 	i = 0;
 	ptr = (char *)ft_calloc(ft_strlen(str) + 1, sizeof(char));
-	if (ptr == NULL)
+	if (!ptr)
 		return (NULL);
 	while (str[i] != '\0')
 	{
