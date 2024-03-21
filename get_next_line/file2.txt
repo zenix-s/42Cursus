@@ -1,4 +1,0 @@
-Fichero 2 linea 1
-Fichero 2 linea 2
-Fichero 2 linea 3
-Fichero 2 linea 4
