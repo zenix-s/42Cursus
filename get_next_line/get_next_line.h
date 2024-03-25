@@ -1,21 +1,29 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/03/25 12:18:40 by serferna          #+#    #+#             */
+/*   Updated: 2024/03/25 12:31:32 by serferna         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef GET_NEXT_LINE_H
-#define GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-#ifndef BUFFER_SIZE
-#define BUFFER_SIZE 10
-#endif
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
 
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <fcntl.h>
-#include <string.h>
-#include <limits.h>
-#include <stdint.h>
-
-void	*ft_memset(void *ptr, int chr, size_t len);
-
-void	ft_bzero(void *ptr, size_t len);
+# include <fcntl.h>
+# include <limits.h>
+# include <stdint.h>
+# include <stdio.h>
+# include <stdlib.h>
+# include <string.h>
+# include <unistd.h>
 
 void	*ft_calloc(size_t count, size_t len);
 
@@ -31,6 +39,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t len);
 
 char	*ft_substr(const char *str, unsigned int start, size_t len);
 
-char *get_next_line(int fd);
+char	*get_next_line(int fd);
 
 #endif
