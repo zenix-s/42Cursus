@@ -125,5 +125,4 @@ char	*get_next_line(int fd)
 		line = get_line_leave_rest(&text[fd]);
 		return (line);
 	}
-	return (NULL);
 }
