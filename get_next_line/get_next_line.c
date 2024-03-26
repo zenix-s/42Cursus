@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 13:08:09 by serferna          #+#    #+#             */
-/*   Updated: 2024/03/25 12:25:39 by serferna         ###   ########.fr       */
+/*   Updated: 2024/03/26 11:46:55 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ char	*ft_strchr(const char *str, int chr)
 	it will be modified to contain the rest of the text.
  * @return The first part of the text until the first '\n' character.
  */
-char	*get_line_leave_rest(char **text)
+static char	*get_line_leave_rest(char **text)
 {
 	int		i;
 	int		len;
@@ -78,7 +78,7 @@ char	*get_line_leave_rest(char **text)
 	return (line);
 }
 
-char	*read_file(int fd, char *text)
+static char	*read_file(int fd, char *text)
 {
 	char	buffer[BUFFER_SIZE + 1];
 	char	*tmp;
