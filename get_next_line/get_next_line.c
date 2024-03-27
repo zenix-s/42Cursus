@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 13:08:09 by serferna          #+#    #+#             */
-/*   Updated: 2024/03/26 11:46:55 by serferna         ###   ########.fr       */
+/*   Updated: 2024/03/26 18:30:15 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ static char	*read_file(int fd, char *text)
 	int		bytes_read;
 
 	bytes_read = 1;
-	while (!strchr(text, '\n') && bytes_read > 0)
+	while (!ft_strchr(text, '\n') && bytes_read > 0)
 	{
 		bytes_read = read(fd, buffer, BUFFER_SIZE);
 		if ((bytes_read == 0 && !ft_strlen(text)) || bytes_read < 0)

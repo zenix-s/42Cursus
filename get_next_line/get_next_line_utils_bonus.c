@@ -6,11 +6,12 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 12:17:48 by serferna          #+#    #+#             */
-/*   Updated: 2024/03/25 14:26:16 by serferna         ###   ########.fr       */
+/*   Updated: 2024/03/27 09:42:29 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line_bonus.h"
+
 
 void	*ft_calloc(size_t count, size_t len)
 {
