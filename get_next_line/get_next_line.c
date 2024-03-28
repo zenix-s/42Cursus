@@ -6,7 +6,7 @@
 /*   By: serferna <serferna@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 13:08:09 by serferna          #+#    #+#             */
-/*   Updated: 2024/03/26 18:30:15 by serferna         ###   ########.fr       */
+/*   Updated: 2024/03/28 09:43:09 by serferna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,13 @@ static char	*get_line_leave_rest(char **text)
 	return (line);
 }
 
+/**
+ * @name read_file
+ * This function reads the file and stores the text in a buffer.
+ * @param fd File descriptor.
+ * @param text The text previously read, and not returned due to being after '\n'.
+ * @return The text read from the file that contains the first '\n' character, or the whole text if there is no '\n' EOF(End Of File).
+*/
 static char	*read_file(int fd, char *text)
 {
 	char	buffer[BUFFER_SIZE + 1];
