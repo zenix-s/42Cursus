@@ -7,3 +7,6 @@
 [submodule "ft_printf"]
   path = ft_printf
   url = git@github.com:zenix-s/ft_printf.git
+[submodule "ft_libft"]
+	path = ft_libft
+	url = git@github.com:zenix-s/ft_libft.git
