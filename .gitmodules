@@ -13,3 +13,6 @@
 [submodule "push_swap"]
 	path = push_swap
 	url = git@github.com:zenix-s/push_swap.git
+[submodule "minitalk"]
+	path = minitalk
+	url = git@github.com:zenix-s/minitalk.git
