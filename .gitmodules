@@ -10,3 +10,6 @@
 [submodule "ft_libft"]
 	path = ft_libft
 	url = git@github.com:zenix-s/ft_libft.git
+[submodule "push_swap"]
+	path = push_swap
+	url = git@github.com:zenix-s/push_swap.git
